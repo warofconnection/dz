@@ -35,4 +35,4 @@ assert 'Общая длина Cat6: 2868.4 м' in '\n'.join(x.text for x in D.pa
 for f in [R/'docs/Расчёты_вариант_8.docx', R/'docs/Презентация_вариант_8.pptx']:
  with zipfile.ZipFile(f) as z:assert z.testzip() is None
 print('Проверки согласованности пройдены: 99 устройств, порты/VLAN, нагрузка, кабель, смета, 18 слайдов и DOCX.')
-print('Cisco Packet Tracer: НЕ ЗАПУСКАЛСЯ; результаты функциональных испытаний отсутствуют.')
+print('Cisco Packet Tracer: модель НЕ ПРОВЕРЕНА; результаты функциональных испытаний отсутствуют.')
