@@ -14,7 +14,7 @@ links.extend([['R-C1','GigabitEthernet0/0','SW-C1A','GigabitEthernet0/1'],['SW-C
 nodes.append(dict(name='PUBLIC-WEB',type=9,model='Server-PT',x=1450,y=100))
 configs={p.stem:p.read_text().splitlines() for p in (R/'packet-tracer/configs').glob('*.txt')}
 js='''// Packet Tracer 8.2.2 Script Engine, ECMAScript 5.\n// Execute only in a NEW EMPTY file, after normal Cisco authentication.\n// Prepared against the official IPC API supplied with 8.2.2; not runtime-verified.\n'''
-js+='var NODES = '+json.dumps(nodes,ensure_ascii=False)+';\nvar LINKS = '+json.dumps(links)+';\nvar CONFIGS = '+json.dumps(configs)+';\n'
+js+='var RESUME_EXISTING = false;\nvar BUILD_COMPLETE = false;\nvar NODES = '+json.dumps(nodes,ensure_ascii=False)+';\nvar LINKS = '+json.dumps(links)+';\nvar CONFIGS = '+json.dumps(configs)+';\n'
 js+='''
 function device(name) { return ipc.network().getDevice(name); }
 function etherPort(name) {
@@ -26,10 +26,22 @@ function etherPort(name) {
     throw new Error("No Ethernet port: "+name);
 }
 function main() {
-    if(ipc.network().getDeviceCount()!==0)
+    var existingCount=ipc.network().getDeviceCount();
+    if(!RESUME_EXISTING && existingCount!==0)
         throw new Error("Open a NEW EMPTY file first. Existing devices are preserved.");
+    if(RESUME_EXISTING) {
+        if(existingCount!==NODES.length)
+            throw new Error("Resume expects exactly "+NODES.length+" existing project devices.");
+        if(ipc.network().getLinkCount()!==0)
+            throw new Error("Resume expects zero existing cables. Existing cables are preserved.");
+        for(var r=0;r<NODES.length;r++) {
+            var expectedDevice=device(NODES[r].name);
+            if(!expectedDevice || expectedDevice.getName()!==NODES[r].name)
+                throw new Error("Missing expected device: "+NODES[r].name);
+        }
+    }
     var ws=ipc.appWindow().getActiveWorkspace().getLogicalWorkspace();
-    for(var i=0;i<NODES.length;i++) {
+    for(var i=0;!RESUME_EXISTING && i<NODES.length;i++) {
         var n=NODES[i],generated=ws.addDevice(n.type,n.model,n.x,n.y);
         if(!generated) throw new Error("Could not create "+n.name+" model "+n.model);
         device(generated).setName(n.name);
@@ -38,8 +50,13 @@ function main() {
         var l=LINKS[j],p1=l[1],p2=l[3];
         if(p1==="@ETH") p1=etherPort(l[0]);
         if(p2==="@ETH") p2=etherPort(l[2]);
-        if(!ws.createLink(l[0],p1,l[2],p2,8107))
-            throw new Error("Failed link: "+l.join(" / "));
+        // Select an explicit cable: AUTO is not reliable for this IPC call.
+        var type1=device(l[0]).getType(),type2=device(l[2]).getType();
+        var cable=((type1===0 && type2===0) || (type1===1 && type2===1)) ? 8101 : 8100;
+        if(!ws.createLink(l[0],p1,l[2],p2,cable))
+            throw new Error("Failed link: "+l[0]+" ["+device(l[0]).getModel()+"] / "+p1+
+                " -> "+l[2]+" ["+device(l[2]).getModel()+"] / "+p2+"; cable="+cable+
+                "; ports1="+device(l[0]).getPorts()+"; ports2="+device(l[2]).getPorts());
     }
     ws.addNote(80,430,1,"Центральный корпус: C1 — регистратура, терапия, диагностика");
     ws.addNote(80,980,1,"C2 — врачи-специалисты, администрация, ИТ");
@@ -81,9 +98,13 @@ function main() {
     publicPort.setIpSubnetMask("203.0.113.10","255.255.255.0");
     publicPort.setDefaultGateway("203.0.113.1");
     publicPort.setDnsServerIp("203.0.113.10");
+    if(ipc.network().getLinkCount()!==LINKS.length)
+        throw new Error("Unexpected cable count after build; expected "+LINKS.length);
+    BUILD_COMPLETE=true;
     ws.addNote(750,1450,1,"Сборка закончена. Требуются настройки HTTP/DNS/EMAIL/Wi-Fi и проверки по ASSEMBLY.md.");
 }
 function cleanUp() { /* Keep created network intact. */ }
 '''
 (R/'packet-tracer/build-clinic8.js').write_text(js)
+(R/'packet-tracer/finish-clinic8.js').write_text(js.replace('var RESUME_EXISTING = false;','var RESUME_EXISTING = true;'))
 print('Prepared script:',len(nodes),'devices,',len(links),'Ethernet links')
