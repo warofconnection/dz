@@ -1,0 +1,29 @@
+digraph network {
+ graph [rankdir=TB, bgcolor="white", pad="0.4", nodesep="0.7", ranksep="0.9", label="Проект логической схемы — не скриншот Packet Tracer", labelloc=t, fontsize=22, fontname="DejaVu Sans"];
+ node [shape=box, style="rounded,filled", fillcolor="#E4EEF5", color="#172C47", fontname="DejaVu Sans", fontsize=14];
+ edge [fontname="DejaVu Sans", fontsize=10, color="#177B9D", dir=none];
+ WEB [label="PUBLIC-WEB\n203.0.113.10"];
+ ISP [label="R-ISP (оператор)\n2911"];
+ WAN [label="SW-PROVIDER (оператор)\n2960: VLAN 901 / 902 / 903"];
+ EDGE_R [label="R-EDGE · 2911\nМаршрутизация / NAT"];
+ C1 [label="R-C1 · 2911\nЭтаж 1 центра"];
+ C2 [label="R-C2 · 2911\nЭтаж 2 центра"];
+ B1 [label="R-B1 · 2911\nФилиал 1"];
+ B2 [label="R-B2 · 2911\nФилиал 2"];
+ SA [label="SW-C1A + SW-C1B\nGi0/2 ↔ Gi0/1\n24 ПК, 2 МФУ, AP, 3 сервера"];
+ SB [label="SW-C2A + SW-C2B\nGi0/2 ↔ Gi0/1\n24 ПК, 2 МФУ, AP"];
+ S1 [label="SW-B1\n18 ПК, 2 МФУ, AP"];
+ S2 [label="SW-B2\n18 ПК, 2 МФУ, AP"];
+ WEB -> ISP [label="Fa0 ↔ Gi0/1"];
+ ISP -> WAN [label="Gi0/0 ↔ Gi0/2 · VLAN 903"];
+ WAN -> EDGE_R [label="Gi0/1 ↔ Gi0/1 · trunk"];
+ WAN -> B1 [label="Fa0/1 ↔ Gi0/1 · VLAN 901\nканал 100 Мбит/с"];
+ WAN -> B2 [label="Fa0/2 ↔ Gi0/1 · VLAN 902\nканал 100 Мбит/с"];
+ EDGE_R -> C1 [label="Gi0/0 ↔ Gi0/2"];
+ C1 -> C2 [label="Gi0/1 ↔ Gi0/1\nOM3 в проекте; медь в модели"];
+ C1 -> SA [label="Gi0/0 ↔ Gi0/1 · trunk"];
+ C2 -> SB [label="Gi0/0 ↔ Gi0/1 · trunk"];
+ B1 -> S1 [label="Gi0/0 ↔ Gi0/1 · trunk"];
+ B2 -> S2 [label="Gi0/0 ↔ Gi0/1 · trunk"];
+ {rank=same; B1;EDGE_R;B2;}
+}

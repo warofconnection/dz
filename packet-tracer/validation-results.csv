@@ -1,0 +1,9 @@
+check,source,expected,actual,status
+DHCP,C1/C2/B1/B2,Адреса соответствующих VLAN,,NOT_RUN
+HTTP-MIS,C2/B1/B2,Открыта страница МИС,,NOT_RUN
+BRANCH-PING,B1->B2,Получен ICMP-ответ,,NOT_RUN
+INTERNET-NAT,Все площадки,Внешний HTTP и NAT-трансляции,,NOT_RUN
+EMAIL,B1->C1/C2->B2,Письма получены,,NOT_RUN
+GUEST-ISOLATION,Все гостевые VLAN,Интернет разрешён; 10/8 запрещён,,NOT_RUN
+PRINTER-PING,Все этажи,МФУ своего этажа доступны,,NOT_RUN
+REOPEN,clinic8.pkt,Проверки после повторного открытия,,NOT_RUN

@@ -1,0 +1,1731 @@
+{
+  "endpoints": [
+    {
+      "floor": "C1",
+      "id": "C1-PC01",
+      "type": "pc",
+      "x": 1.2,
+      "y": 2,
+      "vlan": 20,
+      "department": "Регистратура",
+      "length_m": 16.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC02",
+      "type": "pc",
+      "x": 4.8,
+      "y": 2,
+      "vlan": 20,
+      "department": "Регистратура",
+      "length_m": 16.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC03",
+      "type": "pc",
+      "x": 1.2,
+      "y": 4,
+      "vlan": 20,
+      "department": "Регистратура",
+      "length_m": 14.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC04",
+      "type": "pc",
+      "x": 4.8,
+      "y": 4,
+      "vlan": 20,
+      "department": "Регистратура",
+      "length_m": 14.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC05",
+      "type": "pc",
+      "x": 7.2,
+      "y": 2,
+      "vlan": 20,
+      "department": "Регистратура",
+      "length_m": 19.2
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC06",
+      "type": "pc",
+      "x": 10.8,
+      "y": 2,
+      "vlan": 20,
+      "department": "Регистратура",
+      "length_m": 22.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC07",
+      "type": "pc",
+      "x": 7.2,
+      "y": 4,
+      "vlan": 20,
+      "department": "Регистратура",
+      "length_m": 17.2
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC08",
+      "type": "pc",
+      "x": 10.8,
+      "y": 4,
+      "vlan": 20,
+      "department": "Регистратура",
+      "length_m": 20.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC09",
+      "type": "pc",
+      "x": 13.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 25.2
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC10",
+      "type": "pc",
+      "x": 16.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 28.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC11",
+      "type": "pc",
+      "x": 13.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 23.2
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC12",
+      "type": "pc",
+      "x": 16.8,
+      "y": 4,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 26.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC13",
+      "type": "pc",
+      "x": 19.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 31.2
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC14",
+      "type": "pc",
+      "x": 22.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 34.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC15",
+      "type": "pc",
+      "x": 19.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 29.2
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC16",
+      "type": "pc",
+      "x": 22.8,
+      "y": 4,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 32.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC17",
+      "type": "pc",
+      "x": 25.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Диагностика",
+      "length_m": 37.2
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC18",
+      "type": "pc",
+      "x": 28.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Диагностика",
+      "length_m": 40.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC19",
+      "type": "pc",
+      "x": 25.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Диагностика",
+      "length_m": 35.2
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC20",
+      "type": "pc",
+      "x": 28.8,
+      "y": 4,
+      "vlan": 10,
+      "department": "Диагностика",
+      "length_m": 38.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC21",
+      "type": "pc",
+      "x": 31.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Диагностика",
+      "length_m": 43.2
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC22",
+      "type": "pc",
+      "x": 34.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Диагностика",
+      "length_m": 46.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC23",
+      "type": "pc",
+      "x": 31.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Диагностика",
+      "length_m": 41.2
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PC24",
+      "type": "pc",
+      "x": 34.8,
+      "y": 4,
+      "vlan": 10,
+      "department": "Диагностика",
+      "length_m": 44.8
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PR1",
+      "type": "printer",
+      "x": 8,
+      "y": 8,
+      "vlan": 10,
+      "department": "Общий печатный ресурс",
+      "length_m": 14
+    },
+    {
+      "floor": "C1",
+      "id": "C1-PR2",
+      "type": "printer",
+      "x": 28,
+      "y": 8,
+      "vlan": 10,
+      "department": "Общий печатный ресурс",
+      "length_m": 34
+    },
+    {
+      "floor": "C1",
+      "id": "C1-AP1",
+      "type": "ap",
+      "x": 18,
+      "y": 8,
+      "vlan": 90,
+      "department": "Гостевой доступ",
+      "length_m": 24
+    },
+    {
+      "floor": "C1",
+      "id": "SRV-MIS",
+      "type": "server",
+      "x": 1,
+      "y": 13,
+      "vlan": 30,
+      "department": "Серверная",
+      "length_m": 8
+    },
+    {
+      "floor": "C1",
+      "id": "SRV-MAIL",
+      "type": "server",
+      "x": 3,
+      "y": 13,
+      "vlan": 30,
+      "department": "Серверная",
+      "length_m": 6
+    },
+    {
+      "floor": "C1",
+      "id": "SRV-FILE",
+      "type": "server",
+      "x": 5,
+      "y": 13,
+      "vlan": 30,
+      "department": "Серверная",
+      "length_m": 8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC01",
+      "type": "pc",
+      "x": 1.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 16.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC02",
+      "type": "pc",
+      "x": 4.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 16.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC03",
+      "type": "pc",
+      "x": 1.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 14.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC04",
+      "type": "pc",
+      "x": 4.8,
+      "y": 4,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 14.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC05",
+      "type": "pc",
+      "x": 7.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 19.2
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC06",
+      "type": "pc",
+      "x": 10.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 22.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC07",
+      "type": "pc",
+      "x": 7.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 17.2
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC08",
+      "type": "pc",
+      "x": 10.8,
+      "y": 4,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 20.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC09",
+      "type": "pc",
+      "x": 13.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 25.2
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC10",
+      "type": "pc",
+      "x": 16.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 28.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC11",
+      "type": "pc",
+      "x": 13.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 23.2
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC12",
+      "type": "pc",
+      "x": 16.8,
+      "y": 4,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 26.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC13",
+      "type": "pc",
+      "x": 19.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 31.2
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC14",
+      "type": "pc",
+      "x": 22.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 34.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC15",
+      "type": "pc",
+      "x": 19.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 29.2
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC16",
+      "type": "pc",
+      "x": 22.8,
+      "y": 4,
+      "vlan": 10,
+      "department": "Специалисты",
+      "length_m": 32.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC17",
+      "type": "pc",
+      "x": 25.2,
+      "y": 2,
+      "vlan": 20,
+      "department": "Администрация",
+      "length_m": 37.2
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC18",
+      "type": "pc",
+      "x": 28.8,
+      "y": 2,
+      "vlan": 20,
+      "department": "Администрация",
+      "length_m": 40.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC19",
+      "type": "pc",
+      "x": 25.2,
+      "y": 4,
+      "vlan": 20,
+      "department": "Администрация",
+      "length_m": 35.2
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC20",
+      "type": "pc",
+      "x": 28.8,
+      "y": 4,
+      "vlan": 20,
+      "department": "Администрация",
+      "length_m": 38.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC21",
+      "type": "pc",
+      "x": 31.2,
+      "y": 2,
+      "vlan": 20,
+      "department": "Администрация / ИТ",
+      "length_m": 43.2
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC22",
+      "type": "pc",
+      "x": 34.8,
+      "y": 2,
+      "vlan": 20,
+      "department": "Администрация / ИТ",
+      "length_m": 46.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC23",
+      "type": "pc",
+      "x": 31.2,
+      "y": 4,
+      "vlan": 20,
+      "department": "Администрация / ИТ",
+      "length_m": 41.2
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PC24",
+      "type": "pc",
+      "x": 34.8,
+      "y": 4,
+      "vlan": 20,
+      "department": "Администрация / ИТ",
+      "length_m": 44.8
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PR1",
+      "type": "printer",
+      "x": 8,
+      "y": 8,
+      "vlan": 10,
+      "department": "Общий печатный ресурс",
+      "length_m": 14
+    },
+    {
+      "floor": "C2",
+      "id": "C2-PR2",
+      "type": "printer",
+      "x": 28,
+      "y": 8,
+      "vlan": 10,
+      "department": "Общий печатный ресурс",
+      "length_m": 34
+    },
+    {
+      "floor": "C2",
+      "id": "C2-AP1",
+      "type": "ap",
+      "x": 18,
+      "y": 8,
+      "vlan": 90,
+      "department": "Гостевой доступ",
+      "length_m": 24
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC01",
+      "type": "pc",
+      "x": 1.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Регистратура",
+      "length_m": 16.8
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC02",
+      "type": "pc",
+      "x": 4.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Регистратура",
+      "length_m": 16.8
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC03",
+      "type": "pc",
+      "x": 7.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Регистратура",
+      "length_m": 19.2
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC04",
+      "type": "pc",
+      "x": 10.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Регистратура",
+      "length_m": 22.8
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC05",
+      "type": "pc",
+      "x": 13.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 25.2
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC06",
+      "type": "pc",
+      "x": 16.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 28.8
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC07",
+      "type": "pc",
+      "x": 13.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 23.2
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC08",
+      "type": "pc",
+      "x": 19.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 31.2
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC09",
+      "type": "pc",
+      "x": 22.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 34.8
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC10",
+      "type": "pc",
+      "x": 19.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 29.2
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC11",
+      "type": "pc",
+      "x": 25.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 37.2
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC12",
+      "type": "pc",
+      "x": 28.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 40.8
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC13",
+      "type": "pc",
+      "x": 25.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 35.2
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC14",
+      "type": "pc",
+      "x": 28.8,
+      "y": 4,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 38.8
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC15",
+      "type": "pc",
+      "x": 31.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Сестринская",
+      "length_m": 43.2
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC16",
+      "type": "pc",
+      "x": 34.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Сестринская",
+      "length_m": 46.8
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC17",
+      "type": "pc",
+      "x": 31.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Сестринская",
+      "length_m": 41.2
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PC18",
+      "type": "pc",
+      "x": 34.8,
+      "y": 4,
+      "vlan": 10,
+      "department": "Сестринская",
+      "length_m": 44.8
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PR1",
+      "type": "printer",
+      "x": 8,
+      "y": 8,
+      "vlan": 10,
+      "department": "Общий печатный ресурс",
+      "length_m": 14
+    },
+    {
+      "floor": "B1",
+      "id": "B1-PR2",
+      "type": "printer",
+      "x": 28,
+      "y": 8,
+      "vlan": 10,
+      "department": "Общий печатный ресурс",
+      "length_m": 34
+    },
+    {
+      "floor": "B1",
+      "id": "B1-AP1",
+      "type": "ap",
+      "x": 18,
+      "y": 8,
+      "vlan": 90,
+      "department": "Гостевой доступ",
+      "length_m": 24
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC01",
+      "type": "pc",
+      "x": 1.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Регистратура",
+      "length_m": 16.8
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC02",
+      "type": "pc",
+      "x": 4.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Регистратура",
+      "length_m": 16.8
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC03",
+      "type": "pc",
+      "x": 7.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Регистратура",
+      "length_m": 19.2
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC04",
+      "type": "pc",
+      "x": 10.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Регистратура",
+      "length_m": 22.8
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC05",
+      "type": "pc",
+      "x": 13.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 25.2
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC06",
+      "type": "pc",
+      "x": 16.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 28.8
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC07",
+      "type": "pc",
+      "x": 13.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 23.2
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC08",
+      "type": "pc",
+      "x": 19.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 31.2
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC09",
+      "type": "pc",
+      "x": 22.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 34.8
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC10",
+      "type": "pc",
+      "x": 19.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 29.2
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC11",
+      "type": "pc",
+      "x": 25.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 37.2
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC12",
+      "type": "pc",
+      "x": 28.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 40.8
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC13",
+      "type": "pc",
+      "x": 25.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 35.2
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC14",
+      "type": "pc",
+      "x": 28.8,
+      "y": 4,
+      "vlan": 10,
+      "department": "Терапия",
+      "length_m": 38.8
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC15",
+      "type": "pc",
+      "x": 31.2,
+      "y": 2,
+      "vlan": 10,
+      "department": "Сестринская",
+      "length_m": 43.2
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC16",
+      "type": "pc",
+      "x": 34.8,
+      "y": 2,
+      "vlan": 10,
+      "department": "Сестринская",
+      "length_m": 46.8
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC17",
+      "type": "pc",
+      "x": 31.2,
+      "y": 4,
+      "vlan": 10,
+      "department": "Сестринская",
+      "length_m": 41.2
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PC18",
+      "type": "pc",
+      "x": 34.8,
+      "y": 4,
+      "vlan": 10,
+      "department": "Сестринская",
+      "length_m": 44.8
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PR1",
+      "type": "printer",
+      "x": 8,
+      "y": 8,
+      "vlan": 10,
+      "department": "Общий печатный ресурс",
+      "length_m": 14
+    },
+    {
+      "floor": "B2",
+      "id": "B2-PR2",
+      "type": "printer",
+      "x": 28,
+      "y": 8,
+      "vlan": 10,
+      "department": "Общий печатный ресурс",
+      "length_m": 34
+    },
+    {
+      "floor": "B2",
+      "id": "B2-AP1",
+      "type": "ap",
+      "x": 18,
+      "y": 8,
+      "vlan": 90,
+      "department": "Гостевой доступ",
+      "length_m": 24
+    }
+  ],
+  "ports": [
+    {
+      "device": "SW-C1A",
+      "port": "FastEthernet0/1",
+      "endpoint": "C1-PC01",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C1A",
+      "port": "FastEthernet0/2",
+      "endpoint": "C1-PC02",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C1A",
+      "port": "FastEthernet0/3",
+      "endpoint": "C1-PC03",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C1A",
+      "port": "FastEthernet0/4",
+      "endpoint": "C1-PC04",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C1A",
+      "port": "FastEthernet0/5",
+      "endpoint": "C1-PC05",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C1A",
+      "port": "FastEthernet0/6",
+      "endpoint": "C1-PC06",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C1A",
+      "port": "FastEthernet0/7",
+      "endpoint": "C1-PC07",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C1A",
+      "port": "FastEthernet0/8",
+      "endpoint": "C1-PC08",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C1A",
+      "port": "FastEthernet0/9",
+      "endpoint": "C1-PC09",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1A",
+      "port": "FastEthernet0/10",
+      "endpoint": "C1-PC10",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1A",
+      "port": "FastEthernet0/11",
+      "endpoint": "C1-PC11",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1A",
+      "port": "FastEthernet0/12",
+      "endpoint": "C1-PC12",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/1",
+      "endpoint": "C1-PC13",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/2",
+      "endpoint": "C1-PC14",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/3",
+      "endpoint": "C1-PC15",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/4",
+      "endpoint": "C1-PC16",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/5",
+      "endpoint": "C1-PC17",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/6",
+      "endpoint": "C1-PC18",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/7",
+      "endpoint": "C1-PC19",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/8",
+      "endpoint": "C1-PC20",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/9",
+      "endpoint": "C1-PC21",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/10",
+      "endpoint": "C1-PC22",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/11",
+      "endpoint": "C1-PC23",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/12",
+      "endpoint": "C1-PC24",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/13",
+      "endpoint": "C1-PR1",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/14",
+      "endpoint": "C1-PR2",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/15",
+      "endpoint": "C1-AP1",
+      "vlan": 90
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/16",
+      "endpoint": "SRV-MIS",
+      "vlan": 30
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/17",
+      "endpoint": "SRV-MAIL",
+      "vlan": 30
+    },
+    {
+      "device": "SW-C1B",
+      "port": "FastEthernet0/18",
+      "endpoint": "SRV-FILE",
+      "vlan": 30
+    },
+    {
+      "device": "SW-C2A",
+      "port": "FastEthernet0/1",
+      "endpoint": "C2-PC01",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2A",
+      "port": "FastEthernet0/2",
+      "endpoint": "C2-PC02",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2A",
+      "port": "FastEthernet0/3",
+      "endpoint": "C2-PC03",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2A",
+      "port": "FastEthernet0/4",
+      "endpoint": "C2-PC04",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2A",
+      "port": "FastEthernet0/5",
+      "endpoint": "C2-PC05",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2A",
+      "port": "FastEthernet0/6",
+      "endpoint": "C2-PC06",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2A",
+      "port": "FastEthernet0/7",
+      "endpoint": "C2-PC07",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2A",
+      "port": "FastEthernet0/8",
+      "endpoint": "C2-PC08",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2A",
+      "port": "FastEthernet0/9",
+      "endpoint": "C2-PC09",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2A",
+      "port": "FastEthernet0/10",
+      "endpoint": "C2-PC10",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2A",
+      "port": "FastEthernet0/11",
+      "endpoint": "C2-PC11",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2A",
+      "port": "FastEthernet0/12",
+      "endpoint": "C2-PC12",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/1",
+      "endpoint": "C2-PC13",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/2",
+      "endpoint": "C2-PC14",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/3",
+      "endpoint": "C2-PC15",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/4",
+      "endpoint": "C2-PC16",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/5",
+      "endpoint": "C2-PC17",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/6",
+      "endpoint": "C2-PC18",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/7",
+      "endpoint": "C2-PC19",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/8",
+      "endpoint": "C2-PC20",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/9",
+      "endpoint": "C2-PC21",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/10",
+      "endpoint": "C2-PC22",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/11",
+      "endpoint": "C2-PC23",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/12",
+      "endpoint": "C2-PC24",
+      "vlan": 20
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/13",
+      "endpoint": "C2-PR1",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/14",
+      "endpoint": "C2-PR2",
+      "vlan": 10
+    },
+    {
+      "device": "SW-C2B",
+      "port": "FastEthernet0/15",
+      "endpoint": "C2-AP1",
+      "vlan": 90
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/1",
+      "endpoint": "B1-PC01",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/2",
+      "endpoint": "B1-PC02",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/3",
+      "endpoint": "B1-PC03",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/4",
+      "endpoint": "B1-PC04",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/5",
+      "endpoint": "B1-PC05",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/6",
+      "endpoint": "B1-PC06",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/7",
+      "endpoint": "B1-PC07",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/8",
+      "endpoint": "B1-PC08",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/9",
+      "endpoint": "B1-PC09",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/10",
+      "endpoint": "B1-PC10",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/11",
+      "endpoint": "B1-PC11",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/12",
+      "endpoint": "B1-PC12",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/13",
+      "endpoint": "B1-PC13",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/14",
+      "endpoint": "B1-PC14",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/15",
+      "endpoint": "B1-PC15",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/16",
+      "endpoint": "B1-PC16",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/17",
+      "endpoint": "B1-PC17",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/18",
+      "endpoint": "B1-PC18",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/19",
+      "endpoint": "B1-PR1",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/20",
+      "endpoint": "B1-PR2",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B1",
+      "port": "FastEthernet0/21",
+      "endpoint": "B1-AP1",
+      "vlan": 90
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/1",
+      "endpoint": "B2-PC01",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/2",
+      "endpoint": "B2-PC02",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/3",
+      "endpoint": "B2-PC03",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/4",
+      "endpoint": "B2-PC04",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/5",
+      "endpoint": "B2-PC05",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/6",
+      "endpoint": "B2-PC06",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/7",
+      "endpoint": "B2-PC07",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/8",
+      "endpoint": "B2-PC08",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/9",
+      "endpoint": "B2-PC09",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/10",
+      "endpoint": "B2-PC10",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/11",
+      "endpoint": "B2-PC11",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/12",
+      "endpoint": "B2-PC12",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/13",
+      "endpoint": "B2-PC13",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/14",
+      "endpoint": "B2-PC14",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/15",
+      "endpoint": "B2-PC15",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/16",
+      "endpoint": "B2-PC16",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/17",
+      "endpoint": "B2-PC17",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/18",
+      "endpoint": "B2-PC18",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/19",
+      "endpoint": "B2-PR1",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/20",
+      "endpoint": "B2-PR2",
+      "vlan": 10
+    },
+    {
+      "device": "SW-B2",
+      "port": "FastEthernet0/21",
+      "endpoint": "B2-AP1",
+      "vlan": 90
+    }
+  ],
+  "loads": {
+    "C1": [
+      9.6,
+      12,
+      12.8,
+      12,
+      64,
+      10
+    ],
+    "C2": [
+      9.6,
+      12,
+      12.8,
+      12,
+      32,
+      10
+    ],
+    "B1": [
+      7.2,
+      10,
+      9.6,
+      9,
+      16,
+      10
+    ],
+    "B2": [
+      7.2,
+      10,
+      9.6,
+      9,
+      16,
+      10
+    ]
+  },
+  "copper_m": 2868.4,
+  "spools": 12,
+  "equipment": [
+    [
+      "Рабочая станция",
+      "Core i5 / Ryzen 5, 16 ГБ, SSD 512 ГБ, монитор, 1GbE",
+      84,
+      65000
+    ],
+    [
+      "Сервер",
+      "8 ядер, ECC 64 ГБ, зеркальные SSD, 2 × 1GbE, ИБП отдельно",
+      3,
+      260000
+    ],
+    [
+      "Маршрутизатор",
+      "Cisco C1111-8P; PT: 2911; производительность проверить с лицензией",
+      5,
+      180000
+    ],
+    [
+      "Коммутатор",
+      "Cisco CBS350-24P-4G, 24 × 1GbE PoE+, 4 × SFP 1G; PT: 2960-24TT",
+      6,
+      95000
+    ],
+    [
+      "Точка доступа",
+      "TP-Link EAP610, Wi-Fi 6, 1GbE, PoE; PT: AccessPoint-PT",
+      4,
+      16000
+    ],
+    [
+      "Сетевое МФУ",
+      "Ethernet 1G/100M, лазерное",
+      8,
+      30000
+    ],
+    [
+      "Шкаф 19 дюймов",
+      "Один на этаж; центральная серверная — полноразмерный",
+      4,
+      35000
+    ],
+    [
+      "ИБП",
+      "3 серверных + 4 для этажных стоек",
+      7,
+      45000
+    ],
+    [
+      "Патч-панель Cat6",
+      "24 порта",
+      6,
+      6000
+    ],
+    [
+      "Розетка RJ-45 Cat6",
+      "Один порт на 96 линий, серверы в стойке",
+      96,
+      600
+    ],
+    [
+      "Патч-корд Cat6",
+      "Два на каждую из 99 линий + 7 межсетевых",
+      205,
+      600
+    ],
+    [
+      "Кабель Cat6 U/UTP",
+      "305 м в бухте, сплошная медь, LSZH",
+      12,
+      22000
+    ],
+    [
+      "Оптический кабель OM3",
+      "Межэтажный участок: 12 м + 20% резерв → 15 м",
+      15,
+      180
+    ],
+    [
+      "SFP 1000BASE-SX",
+      "Два для межэтажной линии (реальные маршрутизаторы)",
+      2,
+      7000
+    ],
+    [
+      "Оптический кросс",
+      "2 оконечных комплекта, включая пигтейлы и адаптеры",
+      2,
+      7000
+    ],
+    [
+      "Оптический патч-корд",
+      "LC–LC OM3, 2 м",
+      2,
+      1800
+    ],
+    [
+      "Кабельный лоток",
+      "36 м × 4 этажа + 20% = 173 м",
+      173,
+      450
+    ]
+  ],
+  "total_rub": 9061750
+}

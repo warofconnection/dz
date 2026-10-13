@@ -1,0 +1,179 @@
+enable
+configure terminal
+hostname SW-C1B
+no ip domain-lookup
+vlan 10
+name VLAN10
+exit
+vlan 20
+name VLAN20
+exit
+vlan 30
+name VLAN30
+exit
+vlan 90
+name VLAN90
+exit
+vlan 99
+name VLAN99
+exit
+interface FastEthernet0/1
+description C1-PC13
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/2
+description C1-PC14
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/3
+description C1-PC15
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/4
+description C1-PC16
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/5
+description C1-PC17
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/6
+description C1-PC18
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/7
+description C1-PC19
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/8
+description C1-PC20
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/9
+description C1-PC21
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/10
+description C1-PC22
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/11
+description C1-PC23
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/12
+description C1-PC24
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/13
+description C1-PR1
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/14
+description C1-PR2
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/15
+description C1-AP1
+switchport mode access
+switchport access vlan 90
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/16
+description SRV-MIS
+switchport mode access
+switchport access vlan 30
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/17
+description SRV-MAIL
+switchport mode access
+switchport access vlan 30
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/18
+description SRV-FILE
+switchport mode access
+switchport access vlan 30
+spanning-tree portfast
+no shutdown
+exit
+interface GigabitEthernet0/1
+description TO-SW-A
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,90,99
+no shutdown
+exit
+interface GigabitEthernet0/2
+shutdown
+exit
+interface FastEthernet0/19
+shutdown
+exit
+interface FastEthernet0/20
+shutdown
+exit
+interface FastEthernet0/21
+shutdown
+exit
+interface FastEthernet0/22
+shutdown
+exit
+interface FastEthernet0/23
+shutdown
+exit
+interface FastEthernet0/24
+shutdown
+exit
+interface Vlan99
+ip address 10.1.99.3 255.255.255.0
+no shutdown
+exit
+ip default-gateway 10.1.99.1
+end
+write memory

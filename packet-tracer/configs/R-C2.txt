@@ -1,0 +1,55 @@
+enable
+configure terminal
+hostname R-C2
+no ip domain-lookup
+ip dhcp excluded-address 10.2.10.1 10.2.10.49
+ip dhcp pool C2-V10
+network 10.2.10.0 255.255.255.0
+default-router 10.2.10.1
+dns-server 10.1.30.11
+exit
+ip dhcp excluded-address 10.2.20.1 10.2.20.49
+ip dhcp pool C2-V20
+network 10.2.20.0 255.255.255.0
+default-router 10.2.20.1
+dns-server 10.1.30.11
+exit
+ip dhcp excluded-address 10.2.90.1 10.2.90.49
+ip dhcp pool C2-V90
+network 10.2.90.0 255.255.255.0
+default-router 10.2.90.1
+dns-server 203.0.113.10
+exit
+ip access-list extended GUEST-IN
+permit udp any eq 68 any eq 67
+deny ip any 10.0.0.0 0.255.255.255
+permit ip any any
+exit
+interface GigabitEthernet0/0
+no shutdown
+exit
+interface GigabitEthernet0/0.10
+encapsulation dot1Q 10
+ip address 10.2.10.1 255.255.255.0
+exit
+interface GigabitEthernet0/0.20
+encapsulation dot1Q 20
+ip address 10.2.20.1 255.255.255.0
+exit
+interface GigabitEthernet0/0.90
+encapsulation dot1Q 90
+ip address 10.2.90.1 255.255.255.0
+ip access-group GUEST-IN in
+exit
+interface GigabitEthernet0/0.99
+encapsulation dot1Q 99
+ip address 10.2.99.1 255.255.255.0
+exit
+interface GigabitEthernet0/1
+description TO-R-C1
+ip address 10.255.0.2 255.255.255.252
+no shutdown
+exit
+ip route 0.0.0.0 0.0.0.0 10.255.0.1
+end
+write memory

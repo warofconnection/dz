@@ -1,0 +1,155 @@
+enable
+configure terminal
+hostname SW-C2A
+no ip domain-lookup
+vlan 10
+name VLAN10
+exit
+vlan 20
+name VLAN20
+exit
+vlan 90
+name VLAN90
+exit
+vlan 99
+name VLAN99
+exit
+interface FastEthernet0/1
+description C2-PC01
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/2
+description C2-PC02
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/3
+description C2-PC03
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/4
+description C2-PC04
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/5
+description C2-PC05
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/6
+description C2-PC06
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/7
+description C2-PC07
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/8
+description C2-PC08
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/9
+description C2-PC09
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/10
+description C2-PC10
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/11
+description C2-PC11
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/12
+description C2-PC12
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface GigabitEthernet0/1
+description TO-ROUTER
+switchport mode trunk
+switchport trunk allowed vlan 10,20,90,99
+no shutdown
+exit
+interface GigabitEthernet0/2
+description TO-SW-B
+switchport mode trunk
+switchport trunk allowed vlan 10,20,90,99
+no shutdown
+exit
+interface FastEthernet0/13
+shutdown
+exit
+interface FastEthernet0/14
+shutdown
+exit
+interface FastEthernet0/15
+shutdown
+exit
+interface FastEthernet0/16
+shutdown
+exit
+interface FastEthernet0/17
+shutdown
+exit
+interface FastEthernet0/18
+shutdown
+exit
+interface FastEthernet0/19
+shutdown
+exit
+interface FastEthernet0/20
+shutdown
+exit
+interface FastEthernet0/21
+shutdown
+exit
+interface FastEthernet0/22
+shutdown
+exit
+interface FastEthernet0/23
+shutdown
+exit
+interface FastEthernet0/24
+shutdown
+exit
+interface Vlan99
+ip address 10.2.99.2 255.255.255.0
+no shutdown
+exit
+ip default-gateway 10.2.99.1
+end
+write memory

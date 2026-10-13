@@ -1,0 +1,185 @@
+enable
+configure terminal
+hostname SW-B2
+no ip domain-lookup
+vlan 10
+name VLAN10
+exit
+vlan 90
+name VLAN90
+exit
+vlan 99
+name VLAN99
+exit
+interface FastEthernet0/1
+description B2-PC01
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/2
+description B2-PC02
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/3
+description B2-PC03
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/4
+description B2-PC04
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/5
+description B2-PC05
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/6
+description B2-PC06
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/7
+description B2-PC07
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/8
+description B2-PC08
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/9
+description B2-PC09
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/10
+description B2-PC10
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/11
+description B2-PC11
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/12
+description B2-PC12
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/13
+description B2-PC13
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/14
+description B2-PC14
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/15
+description B2-PC15
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/16
+description B2-PC16
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/17
+description B2-PC17
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/18
+description B2-PC18
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/19
+description B2-PR1
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/20
+description B2-PR2
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
+no shutdown
+exit
+interface FastEthernet0/21
+description B2-AP1
+switchport mode access
+switchport access vlan 90
+spanning-tree portfast
+no shutdown
+exit
+interface GigabitEthernet0/1
+description TO-ROUTER
+switchport mode trunk
+switchport trunk allowed vlan 10,90,99
+no shutdown
+exit
+interface GigabitEthernet0/2
+shutdown
+exit
+interface FastEthernet0/22
+shutdown
+exit
+interface FastEthernet0/23
+shutdown
+exit
+interface FastEthernet0/24
+shutdown
+exit
+interface Vlan99
+ip address 10.12.99.2 255.255.255.0
+no shutdown
+exit
+ip default-gateway 10.12.99.1
+end
+write memory

@@ -1,0 +1,36 @@
+enable
+configure terminal
+hostname R-EDGE
+no ip domain-lookup
+interface GigabitEthernet0/0
+ip address 10.255.0.6 255.255.255.252
+ip nat inside
+no shutdown
+exit
+interface GigabitEthernet0/1
+no shutdown
+exit
+interface GigabitEthernet0/1.901
+encapsulation dot1Q 901
+ip address 10.255.1.1 255.255.255.252
+ip nat inside
+exit
+interface GigabitEthernet0/1.902
+encapsulation dot1Q 902
+ip address 10.255.2.1 255.255.255.252
+ip nat inside
+exit
+interface GigabitEthernet0/1.903
+encapsulation dot1Q 903
+ip address 198.51.100.2 255.255.255.252
+ip nat outside
+exit
+access-list 1 permit 10.0.0.0 0.255.255.255
+ip nat inside source list 1 interface GigabitEthernet0/1.903 overload
+ip route 10.1.0.0 255.255.0.0 10.255.0.5
+ip route 10.2.0.0 255.255.0.0 10.255.0.5
+ip route 10.11.0.0 255.255.0.0 10.255.1.2
+ip route 10.12.0.0 255.255.0.0 10.255.2.2
+ip route 0.0.0.0 0.0.0.0 198.51.100.1
+end
+write memory
