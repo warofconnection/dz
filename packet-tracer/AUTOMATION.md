@@ -14,12 +14,14 @@
 
 1. Создать **новый пустой** проект: File → New. Существующую свою работу сначала сохранить. Скрипт отказывается начинать в непустой сети; созданные при ошибке устройства сам не удаляет.
 2. Открыть **Extensions → Scripting → New PT Script Module**. В General задать Name `Clinic8 Builder`, ID `ru.clinic8.builder`. Поля Password и Publisher Signing оставить пустыми.
-3. В нижней части General → Security Privileges включить ровно четыре флажка: **Get Network Info**, **Change Network Info**, **Change User Interface**, **Miscellaneous UI**. Остальные оставить выключенными.
+3. В нижней части General → Security Privileges включить пять флажков: **Application**, **Get Network Info**, **Change Network Info**, **Change User Interface**, **Miscellaneous UI**. **Application** нужен для `Workspace.getLogicalWorkspace`; это подтверждено таблицей регистрации IPC в поставленном пользователем Packet Tracer 8.2.2. Остальные оставить выключенными.
 4. В **Script Engine** удалить только исходные файлы нового пустого модуля, затем **Import** → выбрать `build-clinic8.js` из распакованной папки `packet-tracer`.
 5. Перейти во вкладку **Info**, прокрутить вниз до раздела **6. Saving**, нажать **Export** и сохранить весь модуль как `Clinic8Builder.pts`. Это не кнопка Export во вкладке Script Engine: там экспортируется только JavaScript-файл. Закрыть окно редактора.
 6. Открыть **Extensions → Scripting → Configure PT Script Modules**, нажать **Add** и выбрать сохранённый `Clinic8Builder.pts`. Выделить добавленный модуль и открыть **Edit**, затем вкладку **Script Engine**.
 7. Нажать **Start**. Не нажимать Run File вместо Start: функция `main()` вызывается при старте модуля. Дождаться завершения; при ошибке открыть **Debug**, скопировать текст ошибки и сделать скриншот сети. Не объявлять частичную сборку успешной и не повторять запуск поверх созданных устройств.
 8. Если все 113 устройств появились, сохранить **File → Save As → clinic8.pkt**. Статус сборки ещё не означает успешных функциональных испытаний.
+
+Если модуль уже добавлен и ошибка сообщает об отсутствии привилегии `getLogicalWorkspace`, откройте его через Configure PT Script Modules → Edit, отметьте Application в General и сохраните весь модуль через Info → Save. Если Save недоступен, экспортируйте обновлённый .pts, удалите старую регистрацию модуля из списка и добавьте обновлённый .pts заново. Устройства при этой ошибке ещё не созданы.
 
 ## Что скрипт выполняет
 
