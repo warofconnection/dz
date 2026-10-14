@@ -25,7 +25,8 @@
       "sha256": "370b91a2c5b7ce5aad16cf33208ac59adf923bb87fafeb25d928bf5393376667",
       "device_count": 116,
       "cable_count": 112,
-      "cisco_runtime": "NOT_RUN"
+      "cisco_runtime": "OPEN_FAILED_USER",
+      "runtime_error": "Unable to open file: not compatible with this version of Cisco Packet Tracer"
     },
     {
       "file": "clinic8-wired-ios.pkt",
@@ -35,5 +36,10 @@
       "cable_count": 112,
       "cisco_runtime": "NOT_RUN"
     }
+  ],
+  "diagnostic_checks": [
+    "Encoder reproduces original user PKT byte for byte",
+    "Bundled Qt 5 XML parser accepts both original and generated XML",
+    "Remote GitHub raw file matches local generated SHA256"
   ]
 }
