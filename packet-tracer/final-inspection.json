@@ -1,7 +1,7 @@
 {
   "source_name": "clinic8.pkt",
-  "bytes": 173152,
-  "sha256": "84853501653b7fea2c25a8b62c352d6a05e5be81e0dc7f3fd00c59df82f81f5c",
+  "bytes": 173706,
+  "sha256": "10a535024a0de440320212d1d4d5ab46ed0d75f967623687308ffed62de7f894",
   "version": "8.2.2.0400",
   "device_counts": {
     "Router": 6,
@@ -121,8 +121,8 @@
     {
       "name": "Tablet PC0",
       "ssid": "Clinic8-C1-Guest",
-      "address_mode": "STATIC",
-      "saved_ip": "10.1.90.50",
+      "address_mode": "DHCP",
+      "saved_ip": null,
       "gateway": "10.1.90.1",
       "dns": "203.0.113.10"
     },
@@ -137,8 +137,8 @@
     {
       "name": "Tablet PC2",
       "ssid": "Clinic8-B1-Guest",
-      "address_mode": "STATIC",
-      "saved_ip": "10.11.90.50",
+      "address_mode": "DHCP",
+      "saved_ip": null,
       "gateway": "10.11.90.1",
       "dns": "203.0.113.10"
     },
@@ -161,8 +161,7 @@
     "4 AP SSIDs and WPA2/AES saved"
   ],
   "pending": [
-    "C1 and B1 tablets save static mode; user must select DHCP on Wireless0",
-    "Actual Logical Workspace screenshot required",
+    "Actual Logical Workspace screenshot file required",
     "Reopened user tests reported successful after initial name resolution delay; not independently simulated in cloud",
     "Some acceptance checks remain outside user-confirmed test scope"
   ]

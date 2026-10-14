@@ -254,6 +254,12 @@
       "repeat_evidence": "User confirmed all worked after instructions to wait and retry direct/named MIS HTTP and guest external HTTP",
       "saved_artifact": "packet-tracer/clinic8.pkt",
       "root_cause": "Initial name-resolution failure; exact cause not established"
+    },
+    "FINAL_TABLET_DHCP": {
+      "status": "PASS_DOCUMENT_AUDIT",
+      "artifact": "packet-tracer/clinic8.pkt",
+      "sha256": "10a535024a0de440320212d1d4d5ab46ed0d75f967623687308ffed62de7f894",
+      "scope": "All four Wireless0 DHCP flags and client entries saved in user file; document inspected offline"
     }
   }
 }
