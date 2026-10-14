@@ -241,6 +241,15 @@
       "status": "PASS_USER",
       "evidence": "User confirmed all three site guest checks worked following external HTTP allowed and internal ping/HTTP blocked instructions",
       "artifact": "Updated user PKT pending upload"
+    },
+    "REOPEN": {
+      "status": "REGRESSION_REPORTED",
+      "B1_MIS_by_name": "User screenshot Host Name Unresolved at http://mis.clinic8.test after reopening saved project",
+      "B1_MIS_by_ip": "NOT_RUN",
+      "DNS_failure_cause": "UNKNOWN",
+      "guest_internal_access": "User reports internal MIS not opening and ping blocked",
+      "guest_external_after_reopen": "NOT_CONFIRMED; user tested internal URL",
+      "user_saved_artifact": "Pending upload"
     }
   }
 }

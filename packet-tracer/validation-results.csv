@@ -26,3 +26,4 @@ GUEST-C1,Guest tablet at C1,Guest DHCP; external HTTP allowed; internal ICMP and
 GUEST-C2,Guest tablet at C2,External HTTP allowed; internal ICMP and HTTP blocked,User confirmed expected checks successful,PASS
 GUEST-B1,Guest tablet at B1,External HTTP allowed; internal ICMP and HTTP blocked,User confirmed expected checks successful,PASS
 GUEST-B2,Guest tablet at B2,External HTTP allowed; internal ICMP and HTTP blocked,User confirmed expected checks successful,PASS
+REOPEN-DNS-B1,B1-PC01 after reopening user saved project,MIS opens by name after reopening,User screenshot: Host Name Unresolved; saved PKT and direct IP test pending,FAIL
