@@ -75,5 +75,7 @@
     "no other device changes",
     "lossless authenticated container round trip"
   ],
-  "cisco_opening": "NOT_RUN"
+  "cisco_opening": "OPEN_PASS_USER",
+  "screenshot": "diagrams/packet-tracer-l1l2.png",
+  "user_confirmation": "все кайф; приложен общий снимок с зелёными индикаторами проводных соединений"
 }
