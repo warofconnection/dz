@@ -1,0 +1,24 @@
+{
+  "file": "clinic8-wired-preserved.pkt",
+  "bytes": 141608,
+  "sha256": "0fe50283a1b70ae90b45c1d81ff7963589a5f27b6b2609cfa66fccc371d0e82f",
+  "version": "8.2.2.0400",
+  "device_count": 116,
+  "cable_count": 112,
+  "original_xml_outside_insertion": "BYTE_IDENTICAL",
+  "source_container_reproduction": "BYTE_IDENTICAL",
+  "original_cdata_blocks_preserved": 6,
+  "runtime": "NOT_RUN",
+  "prior_candidate_runtime": "OPEN_FAILED_USER",
+  "invalid_ap_port_names_corrected": [
+    "C1-AP1",
+    "C2-AP1",
+    "B1-AP1",
+    "B2-AP1"
+  ],
+  "opening_failure_cause": "INVALID_AP_PORT_NAMES_FOUND; runtime confirmation pending",
+  "limitations": [
+    "Inserted cable records still require Cisco runtime verification",
+    "IP/VLAN/services not configured"
+  ]
+}
