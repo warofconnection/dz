@@ -216,6 +216,16 @@
         "c2@clinic8.test -> b2@clinic8.test"
       ],
       "evidence": "User confirmed success after instructions to send and receive both messages"
+    },
+    "C1_GUEST": {
+      "status": "PASS_USER",
+      "configuration": "User followed WPA2-PSK/AES instructions on C1-AP1 and TabletPC-PT",
+      "dhcp": "User confirmed tablet received requested guest-network address; exact address not supplied",
+      "external_http": "PASS_USER http://www.example.test",
+      "internal_ping": "BLOCKED_USER 10.1.30.10",
+      "internal_http": "BLOCKED_USER http://10.1.30.10",
+      "scope": "C1 only; C2/B1/B2 guest tests pending",
+      "artifact": "These GUI changes exist on user machine; updated PKT not uploaded yet"
     }
   }
 }

@@ -22,3 +22,4 @@ PING-C2-PC01-203.0.113.10,C2-PC01 -> 203.0.113.10,ICMP replies,User confirmed al
 PING-B2-PC01-10.1.30.10,B2-PC01 -> 10.1.30.10,ICMP replies,User confirmed all requested pings successful,PASS
 PING-B2-PC01-203.0.113.10,B2-PC01 -> 203.0.113.10,ICMP replies,User confirmed all requested pings successful,PASS
 PING-B2-PC01-10.11.10.58,B2-PC01 -> 10.11.10.58,ICMP replies,User confirmed all requested pings successful,PASS
+GUEST-C1,Guest tablet at C1,Guest DHCP; external HTTP allowed; internal ICMP and HTTP blocked,User confirmed expected address obtained and all three access checks matched,PASS
