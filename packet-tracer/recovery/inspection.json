@@ -1,0 +1,714 @@
+{
+  "packet_tracer_version": "8.2.2.0400",
+  "source_sha256": "7404473a721920b5fd90b474cdf175bcc4595ab2c16278a2346da6be1580397d",
+  "file_integrity": "EAX authentication and zlib checksum/length verified",
+  "total_engine_devices": 116,
+  "expected_project_devices": 113,
+  "missing_project_devices": [],
+  "additional_devices": [
+    "Power Distribution Device0",
+    "Power Distribution Device1",
+    "Power Distribution Device2"
+  ],
+  "wired_links": 0,
+  "devices": [
+    {
+      "name": "R-C1",
+      "type": "Router",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "Power Distribution Device0",
+      "type": "Power Distribution Device",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "R-C2",
+      "type": "Router",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "R-EDGE",
+      "type": "Router",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "R-B1",
+      "type": "Router",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "R-B2",
+      "type": "Router",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "R-ISP",
+      "type": "Router",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "SW-C1A",
+      "type": "Switch",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "SW-C1B",
+      "type": "Switch",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "SW-C2A",
+      "type": "Switch",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "SW-C2B",
+      "type": "Switch",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "SW-B1",
+      "type": "Switch",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "SW-B2",
+      "type": "Switch",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "SW-PROVIDER",
+      "type": "Switch",
+      "configured_ip_lines": 0,
+      "startup_lines": 0
+    },
+    {
+      "name": "C1-PC01",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC02",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC03",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC04",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC05",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC06",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC07",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC08",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC09",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC10",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC11",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC12",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC13",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC14",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC15",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC16",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC17",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC18",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC19",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC20",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC21",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC22",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC23",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PC24",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PR1",
+      "type": "Printer",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-PR2",
+      "type": "Printer",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C1-AP1",
+      "type": "AccessPoint",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "SRV-MIS",
+      "type": "Server",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "Power Distribution Device1",
+      "type": "Power Distribution Device",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "SRV-MAIL",
+      "type": "Server",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "SRV-FILE",
+      "type": "Server",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "Power Distribution Device2",
+      "type": "Power Distribution Device",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC01",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC02",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC03",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC04",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC05",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC06",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC07",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC08",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC09",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC10",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC11",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC12",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC13",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC14",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC15",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC16",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC17",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC18",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC19",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC20",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC21",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC22",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC23",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PC24",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PR1",
+      "type": "Printer",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-PR2",
+      "type": "Printer",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "C2-AP1",
+      "type": "AccessPoint",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC01",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC02",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC03",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC04",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC05",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC06",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC07",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC08",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC09",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC10",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC11",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC12",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC13",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC14",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC15",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC16",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC17",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PC18",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PR1",
+      "type": "Printer",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-PR2",
+      "type": "Printer",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B1-AP1",
+      "type": "AccessPoint",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC01",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC02",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC03",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC04",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC05",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC06",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC07",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC08",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC09",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC10",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC11",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC12",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC13",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC14",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC15",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC16",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC17",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PC18",
+      "type": "Pc",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PR1",
+      "type": "Printer",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-PR2",
+      "type": "Printer",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "B2-AP1",
+      "type": "AccessPoint",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    },
+    {
+      "name": "PUBLIC-WEB",
+      "type": "Server",
+      "configured_ip_lines": 0,
+      "startup_lines": null
+    }
+  ],
+  "runtime_validation": "NOT_RUN",
+  "crash_cause": "NOT_ESTABLISHED"
+}
