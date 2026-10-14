@@ -249,7 +249,11 @@
       "DNS_failure_cause": "UNKNOWN",
       "guest_internal_access": "User reports internal MIS not opening and ping blocked",
       "guest_external_after_reopen": "NOT_CONFIRMED; user tested internal URL",
-      "user_saved_artifact": "Pending upload"
+      "user_saved_artifact": "Pending upload",
+      "repeat_status": "PASS_USER_AFTER_WAIT",
+      "repeat_evidence": "User confirmed all worked after instructions to wait and retry direct/named MIS HTTP and guest external HTTP",
+      "saved_artifact": "packet-tracer/clinic8.pkt",
+      "root_cause": "Initial name-resolution failure; exact cause not established"
     }
   }
 }

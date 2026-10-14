@@ -1,0 +1,169 @@
+{
+  "source_name": "clinic8.pkt",
+  "bytes": 173152,
+  "sha256": "84853501653b7fea2c25a8b62c352d6a05e5be81e0dc7f3fd00c59df82f81f5c",
+  "version": "8.2.2.0400",
+  "device_counts": {
+    "Router": 6,
+    "Power Distribution Device": 3,
+    "Switch": 7,
+    "Pc": 84,
+    "Printer": 8,
+    "AccessPoint": 4,
+    "Server": 4,
+    "TabletPC": 4
+  },
+  "device_count": 120,
+  "cable_count": 112,
+  "unique_cable_endpoints": 224,
+  "vlans": {
+    "SW-C1A": [
+      1,
+      10,
+      20,
+      30,
+      90,
+      99,
+      1002,
+      1003,
+      1004,
+      1005
+    ],
+    "SW-C1B": [
+      1,
+      10,
+      20,
+      30,
+      90,
+      99,
+      1002,
+      1003,
+      1004,
+      1005
+    ],
+    "SW-C2A": [
+      1,
+      10,
+      20,
+      90,
+      99,
+      1002,
+      1003,
+      1004,
+      1005
+    ],
+    "SW-C2B": [
+      1,
+      10,
+      20,
+      90,
+      99,
+      1002,
+      1003,
+      1004,
+      1005
+    ],
+    "SW-B1": [
+      1,
+      10,
+      90,
+      99,
+      1002,
+      1003,
+      1004,
+      1005
+    ],
+    "SW-B2": [
+      1,
+      10,
+      90,
+      99,
+      1002,
+      1003,
+      1004,
+      1005
+    ],
+    "SW-PROVIDER": [
+      1,
+      901,
+      902,
+      903,
+      1002,
+      1003,
+      1004,
+      1005
+    ]
+  },
+  "wired_pcs_with_dhcp_enabled": 84,
+  "access_points": [
+    {
+      "name": "C1-AP1",
+      "ssid": "Clinic8-C1-Guest",
+      "wpa2_aes_saved": true
+    },
+    {
+      "name": "C2-AP1",
+      "ssid": "Clinic8-C2-Guest",
+      "wpa2_aes_saved": true
+    },
+    {
+      "name": "B1-AP1",
+      "ssid": "Clinic8-B1-Guest",
+      "wpa2_aes_saved": true
+    },
+    {
+      "name": "B2-AP1",
+      "ssid": "Clinic8-B2-Guest",
+      "wpa2_aes_saved": true
+    }
+  ],
+  "tablets": [
+    {
+      "name": "Tablet PC0",
+      "ssid": "Clinic8-C1-Guest",
+      "address_mode": "STATIC",
+      "saved_ip": "10.1.90.50",
+      "gateway": "10.1.90.1",
+      "dns": "203.0.113.10"
+    },
+    {
+      "name": "Tablet PC1",
+      "ssid": "Clinic8-C2-Guest",
+      "address_mode": "DHCP",
+      "saved_ip": null,
+      "gateway": "10.2.90.1",
+      "dns": "203.0.113.10"
+    },
+    {
+      "name": "Tablet PC2",
+      "ssid": "Clinic8-B1-Guest",
+      "address_mode": "STATIC",
+      "saved_ip": "10.11.90.50",
+      "gateway": "10.11.90.1",
+      "dns": "203.0.113.10"
+    },
+    {
+      "name": "Tablet PC3",
+      "ssid": "Clinic8-B2-Guest",
+      "address_mode": "DHCP",
+      "saved_ip": null,
+      "gateway": "10.12.90.1",
+      "dns": "203.0.113.10"
+    }
+  ],
+  "checks": [
+    "EAX/zlib integrity",
+    "unique device names and refs",
+    "112 cables resolve and have no repeated endpoint",
+    "all 99 project endpoints present",
+    "7 native VLAN databases contain project VLANs",
+    "84 wired PC DHCP flags enabled",
+    "4 AP SSIDs and WPA2/AES saved"
+  ],
+  "pending": [
+    "C1 and B1 tablets save static mode; user must select DHCP on Wireless0",
+    "Actual Logical Workspace screenshot required",
+    "Reopened user tests reported successful after initial name resolution delay; not independently simulated in cloud",
+    "Some acceptance checks remain outside user-confirmed test scope"
+  ]
+}
