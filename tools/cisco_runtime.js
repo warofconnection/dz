@@ -1,5 +1,7 @@
 // ECMAScript 5 / QtScript. Intended to run as a single persistent Script Module.
 var BUILD_VERSION="clinic8-v3.1";
+// Withdrawn after a real Packet Tracer crash. Never start automatically.
+var BUILDER_ENABLED=false;
 var LAB_PASSWORD="Clinic8-Lab-2026"; // Only synthetic lab accounts and lab Wi-Fi.
 var BUILD_COMPLETE=false, BUILD_STATE="NOT_STARTED", BUILD_REPORT=[], BUILD_ERRORS=[];
 var DEVICES={}, PORTS={}, WORKSPACE=null, STATUS_NOTE=null, TIMERS=[], RUNNING=false;
@@ -32,7 +34,7 @@ function fail(e) {
     RUNNING=false;BUILD_COMPLETE=false;BUILD_STATE="ERROR";
     var message=text(e && e.message ? e.message : e);
     BUILD_ERRORS.push(message);report("ERROR: "+message+". Partial network preserved.");
-    stopSelf();
+    // Self-stop removed: destroying an executing Script Module is unsafe to assume.
 }
 function later(f,ms) {
     var t=setTimeout(function(){if(!RUNNING)return;try{f();}catch(e){fail(e);}},ms);
@@ -382,14 +384,14 @@ function complete() {
     if(!flag(app.fileSaveAs(SAVED_FILE)))throw new Error("Packet Tracer did not confirm saving "+SAVED_FILE+". Network preserved.");
     BUILD_COMPLETE=true;BUILD_STATE="DONE";RUNNING=false;
     report("SAVED: "+SAVED_FILE);
-    stopSelf();
-}
-function stopSelf() {
-    setTimeout(function(){
-        try{ipc.ipcManager().thisInstance().stop();}catch(e){if(typeof dprint==="function")dprint("Stop the module manually: "+text(e));}
-    },100);
+    // Self-stop removed: destroying an executing Script Module is unsafe to assume.
 }
 function main() {
+    if(!BUILDER_ENABLED){
+        BUILD_STATE="WITHDRAWN";
+        if(typeof dprint==="function")dprint("WITHDRAWN after a Packet Tracer crash. Do not run this builder; preserve your saved project for diagnosis.");
+        return;
+    }
     if(RUNNING)throw new Error("Builder already running");
     BUILD_COMPLETE=false;BUILD_STATE="STARTING";BUILD_REPORT=[];BUILD_ERRORS=[];
     CREATED=0;REUSED=0;WIRED=0;DHCP_ATTEMPTS=0;RUNNING=true;

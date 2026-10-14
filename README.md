@@ -17,7 +17,7 @@
 - `docs/cable-routes.csv`, `project-data.json` — исходные числовые данные.
 - `packet-tracer/ports.csv`, `topology.dot`, `configs/` — портовая ведомость, редактируемая схема, 13 подготовленных конфигураций устройств.
 - `packet-tracer/ASSEMBLY.md` — ручная сборка в Packet Tracer 8.2.2, GUI-службы и приёмочные проверки.
-- `packet-tracer/clinic8-all-in-one.js`, `AUTOMATION.md` — единый сценарий создания/продолжения сети, настройки служб, испытаний и сохранения .pkt в авторизованном Packet Tracer. Логика проверена тестами с заменами IPC; исполнение в Cisco пока не подтверждено.
+- `packet-tracer/clinic8-all-in-one.js`, `AUTOMATION.md` — сценарий **отозван и отключён** после сообщения о полном закрытии Packet Tracer. Причина не установлена; не запускать в реальной программе до диагностики. Тесты с заменами IPC не подтвердили устойчивость Cisco.
 - `packet-tracer/validation-results.csv` — все проверки Cisco пока `NOT_RUN`.
 - `docs/requirements-checklist.md` — соответствие методичке и незакрытые требования.
 

@@ -65,10 +65,12 @@ function fixture(options={}) {
  const ipc={network:()=>({getDeviceCount:()=>realNumber(devices.size),getDeviceAt:i=>[...devices.values()][i],getDevice:n=>devices.get(n)}),appWindow:()=>app,ipcManager:()=>({thisInstance:()=>({stop(){stopped=true;ctx.cleanUp();return true}})})};
  ctx=vm.createContext({ipc,dprint:s=>output.push(s),setTimeout(f,ms){const t={f,at:clock+ms,cancel:false};queue.push(t);return t},clearTimeout(t){t.cancel=true}});
  vm.runInContext(source,ctx);
+ if(!options.defaultDisabled)ctx.BUILDER_ENABLED=true;
  function drain(){let iterations=0;while(queue.length){assert(++iterations<5000,'timers must terminate');queue.sort((a,b)=>a.at-b.at);const t=queue.shift();clock=t.at;if(!t.cancel)t.f()}}
  return {ctx,devices,links,notes,output,saved,commands,createDevice,wire(a,p1,b,p2){return ws.createLink(a,p1,b,p2,8100)},run(){ctx.main();drain()},get stopped(){return stopped}};
 }
-function done(f){const priorSaves=f.saved.length;f.run();assert.equal(f.ctx.BUILD_STATE,'DONE',f.ctx.BUILD_ERRORS.join('\n'));assert.equal(f.links.size,112);assert(f.ctx.BUILD_COMPLETE);assert.equal(f.saved.length,priorSaves+1);assert(f.stopped)}
+function done(f){const priorSaves=f.saved.length;f.run();assert.equal(f.ctx.BUILD_STATE,'DONE',f.ctx.BUILD_ERRORS.join('\n'));assert.equal(f.links.size,112);assert(f.ctx.BUILD_COMPLETE);assert.equal(f.saved.length,priorSaves+1);assert(!f.stopped)}
+let withdrawn=fixture({defaultDisabled:true});withdrawn.run();assert.equal(withdrawn.ctx.BUILD_STATE,'WITHDRAWN');assert.equal(withdrawn.devices.size,0);assert.equal(withdrawn.saved.length,0);
 let fresh=fixture();done(fresh);assert.equal(fresh.devices.size,117);assert.equal(fresh.ctx.CREATED,117);
 const commandCount=fresh.commands.length;done(fresh);assert.equal(fresh.devices.size,117);assert.equal(fresh.ctx.CREATED,0);assert.equal(fresh.links.size,112);assert(fresh.commands.length<commandCount*1.2,'already applied IOS must be skipped');
 let stringValues=fixture({scalarStrings:true,splitPortNames:true,winPath:true});done(stringValues);assert(stringValues.saved[0].startsWith('C:\\Users\\Student\\Documents\\clinic8-v3-'));
