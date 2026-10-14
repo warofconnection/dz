@@ -1,0 +1,23 @@
+{
+  "file": "clinic8-L1-L2.pkt",
+  "bytes": 145911,
+  "sha256": "05763343eacf05599dc46bad9c76d878f630c1e6df79dec1f823bf4797c859b6",
+  "source_sha256": "10a535024a0de440320212d1d4d5ab46ed0d75f967623687308ffed62de7f894",
+  "devices": 120,
+  "cables": 112,
+  "pristine_engines_restored": 116,
+  "tablets_reset": 4,
+  "checks": [
+    "source unchanged",
+    "layout and names preserved",
+    "save-ref IDs preserved",
+    "112 cable records unchanged",
+    "no assigned IPv4 or IPv6 in engines",
+    "no custom IP routes/DHCP/NAT/ACL/subinterfaces",
+    "switches only have factory default VLANs",
+    "factory device services restored",
+    "EAX/zlib and lossless codec checks"
+  ],
+  "cisco_opening": "NOT_RUN",
+  "note": "Default unspecified values 0.0.0.0 and factory IOS commands can remain. Automatic local addresses may be generated again by Cisco."
+}
