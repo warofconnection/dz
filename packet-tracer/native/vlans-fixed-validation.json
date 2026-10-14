@@ -1,0 +1,132 @@
+{
+  "native_vlan_database": {
+    "SW-B2": [
+      10,
+      90,
+      99
+    ],
+    "SW-C2B": [
+      10,
+      20,
+      90,
+      99
+    ],
+    "SW-C1B": [
+      10,
+      20,
+      30,
+      90,
+      99
+    ],
+    "SW-C1A": [
+      10,
+      20,
+      30,
+      90,
+      99
+    ],
+    "SW-C2A": [
+      10,
+      20,
+      90,
+      99
+    ],
+    "SW-PROVIDER": [
+      901,
+      902,
+      903
+    ],
+    "SW-B1": [
+      10,
+      90,
+      99
+    ]
+  },
+  "source_opening": "PASS_USER",
+  "cable_count": 112,
+  "ios_devices": [
+    "R-B1",
+    "R-B2",
+    "R-C1",
+    "R-C2",
+    "R-EDGE",
+    "R-ISP",
+    "SW-B1",
+    "SW-B2",
+    "SW-C1A",
+    "SW-C1B",
+    "SW-C2A",
+    "SW-C2B",
+    "SW-PROVIDER"
+  ],
+  "dhcp_pcs": 84,
+  "static_hosts": [
+    {
+      "name": "C1-PR1",
+      "ip": "10.1.10.20"
+    },
+    {
+      "name": "C1-PR2",
+      "ip": "10.1.10.21"
+    },
+    {
+      "name": "SRV-MIS",
+      "ip": "10.1.30.10"
+    },
+    {
+      "name": "SRV-MAIL",
+      "ip": "10.1.30.11"
+    },
+    {
+      "name": "SRV-FILE",
+      "ip": "10.1.30.12"
+    },
+    {
+      "name": "C2-PR1",
+      "ip": "10.2.10.20"
+    },
+    {
+      "name": "C2-PR2",
+      "ip": "10.2.10.21"
+    },
+    {
+      "name": "B1-PR1",
+      "ip": "10.11.10.20"
+    },
+    {
+      "name": "B1-PR2",
+      "ip": "10.11.10.21"
+    },
+    {
+      "name": "B2-PR1",
+      "ip": "10.12.10.20"
+    },
+    {
+      "name": "B2-PR2",
+      "ip": "10.12.10.21"
+    },
+    {
+      "name": "PUBLIC-WEB",
+      "ip": "203.0.113.10"
+    }
+  ],
+  "email_clients": [
+    "C1-PC01",
+    "C2-PC01",
+    "B1-PC01",
+    "B2-PC01"
+  ],
+  "dns_records": {
+    "mis.clinic8.test": "10.1.30.10",
+    "mail.clinic8.test": "10.1.30.11",
+    "files.clinic8.test": "10.1.30.12",
+    "www.example.test": "203.0.113.10"
+  },
+  "file_opening": "NOT_RUN",
+  "functional_tests": "NOT_RUN",
+  "pending": [
+    "Cisco must apply saved IOS config and DHCP at load; verify in CLI",
+    "Wi-Fi security and guest test tablets still require setup",
+    "End-to-end connectivity, HTTP, mail, NAT and guest ACL require real tests"
+  ]
+}

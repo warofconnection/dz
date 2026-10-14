@@ -38,6 +38,16 @@ def edit(match):
   for tag in ['RUNNINGCONFIG','STARTUPCONFIG']:
    node=child(e,tag);empty(node)
    for line in lines:add(node,'LINE',line)
+  if name.startswith('SW-'):
+   # Normal-range VLANs persist separately from running/startup config in PT.
+   # Use the real source VLANS/VLAN attribute schema; preserve default VLANs.
+   database=child(e,'VLANS')
+   existing={n.getAttribute('number') for n in database.childNodes if n.nodeType==n.ELEMENT_NODE and n.tagName=='VLAN'}
+   for line in configs[name]:
+    if line.startswith('vlan '):
+     number=line.split()[1];assert number.isdigit()
+     if number not in existing:
+      entry=add(database,'VLAN');entry.setAttribute('number',number);entry.setAttribute('name','VLAN'+number);entry.setAttribute('rspan','0');existing.add(number)
  elif name in endpoints or name=='PUBLIC-WEB':
   ep=endpoints.get(name)
   if ep and ep['type']=='ap':
@@ -94,8 +104,17 @@ prefix,suffix=xml.split(b'<DEVICES>',1)[0],xml.split(b'</DEVICES>',1)[1]
 assert updated.startswith(prefix+b'<DEVICES>') and updated.endswith(b'</DEVICES>'+suffix)
 assert len(dhcp)==84 and len(static)==12 and len(configs)==13 and len(clients)==4
 assert len({x['ip'] for x in static})==12
-packed=encode_document(updated);out=ROOT/'packet-tracer/native/clinic8-configured.pkt';out.write_bytes(packed)
-report={'source_opening':'PASS_USER','cable_count':112,'ios_devices':sorted(configs),'dhcp_pcs':len(dhcp),'static_hosts':static,'email_clients':clients,'dns_records':dns_records,'file_opening':'NOT_RUN','functional_tests':'NOT_RUN','pending':['Cisco must apply saved IOS config and DHCP at load; verify in CLI','Wi-Fi security and guest test tablets still require setup','End-to-end connectivity, HTTP, mail, NAT and guest ACL require real tests']}
-(ROOT/'packet-tracer/native/configured-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+packed=encode_document(updated);out=ROOT/'packet-tracer/native/clinic8-vlans-fixed.pkt';out.write_bytes(packed)
+vlan_database={}
+for name in configs:
+ if name.startswith('SW-'):
+  device=next(d for d in b.findall('NETWORK/DEVICES/DEVICE') if d.findtext('ENGINE/NAME')==name)
+  numbers={int(v.attrib['number']) for v in device.findall('ENGINE/VLANS/VLAN')}
+  planned={int(line.split()[1]) for line in configs[name] if line.startswith('vlan ')}
+  assert planned <= numbers,(name,planned,numbers)
+  vlan_database[name]=sorted(planned)
+assert len(vlan_database)==7
+report={'native_vlan_database':vlan_database,'source_opening':'PASS_USER','cable_count':112,'ios_devices':sorted(configs),'dhcp_pcs':len(dhcp),'static_hosts':static,'email_clients':clients,'dns_records':dns_records,'file_opening':'NOT_RUN','functional_tests':'NOT_RUN','pending':['Cisco must apply saved IOS config and DHCP at load; verify in CLI','Wi-Fi security and guest test tablets still require setup','End-to-end connectivity, HTTP, mail, NAT and guest ACL require real tests']}
+(ROOT/'packet-tracer/native/vlans-fixed-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 assert source.read_bytes()==raw
 print('Prepared',out.name,'bytes',len(packed),'devices changed',len(changed),'DHCP PCs',len(dhcp),'static hosts',len(static))

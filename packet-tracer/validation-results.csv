@@ -9,3 +9,5 @@ PRINTER-PING,Все этажи,МФУ своего этажа доступны,,
 REOPEN,clinic8.pkt,Проверки после повторного открытия,,NOT_RUN
 DHCP-FIRST,C1-PC01 (requested test),IPv4 10.1.20.x/24; gateway 10.1.20.1,User screenshot: 169.254.135.54/16; gateway 0.0.0.0,FAIL
 PING-FIRST,C1-PC01 (requested test) -> 10.1.30.10,ICMP replies,"User screenshot: 4 sent, 0 received",FAIL
+R-C1-INTERFACES,R-C1,Planned IP interfaces up/up,"User screenshot confirms 5 subinterfaces and 2 routed links with planned addresses, up/up",PASS
+SW-C1A-VLAN-DB,SW-C1A prior configured file,"VLANs 10,20,30,90,99","User screenshot: only default VLANs 1,1002-1005",FAIL

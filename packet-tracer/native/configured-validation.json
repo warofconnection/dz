@@ -95,6 +95,9 @@
     "received": 0,
     "sent": 4,
     "dhcp": "NO_LEASE",
-    "ios_configuration_application": "UNKNOWN"
+    "ios_configuration_application": "UNKNOWN",
+    "R-C1_interfaces": "USER_CONFIRMED: Gi0/0.10/.20/.30/.90/.99 and Gi0/1,Gi0/2 have planned IPs, up/up",
+    "SW-C1A_vlans": "USER_CONFIRMED: only 1,1002,1003,1004,1005; project VLANs missing",
+    "diagnosis": "Native ENGINE/VLANS database was missing from generated switch settings"
   }
 }
