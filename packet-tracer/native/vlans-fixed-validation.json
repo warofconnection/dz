@@ -122,11 +122,28 @@
     "files.clinic8.test": "10.1.30.12",
     "www.example.test": "203.0.113.10"
   },
-  "file_opening": "NOT_RUN",
-  "functional_tests": "NOT_RUN",
+  "file_opening": "OPEN_PASS_USER",
+  "functional_tests": "PARTIAL_USER_VERIFIED",
   "pending": [
     "Cisco must apply saved IOS config and DHCP at load; verify in CLI",
     "Wi-Fi security and guest test tablets still require setup",
     "End-to-end connectivity, HTTP, mail, NAT and guest ACL require real tests"
-  ]
+  ],
+  "observations": {
+    "C1-PC01_DHCP": {
+      "status": "PASS",
+      "ip": "10.1.20.52",
+      "mask": "255.255.255.0",
+      "gateway": "10.1.20.1"
+    },
+    "C1-PC01_to_MIS": {
+      "status": "REACHABILITY_CONFIRMED",
+      "target": "10.1.30.10",
+      "sent": 4,
+      "received": 3,
+      "first_packet_timeout": true,
+      "timeout_cause": "ARP possible, not confirmed",
+      "repeat_test": "NOT_RUN"
+    }
+  }
 }
