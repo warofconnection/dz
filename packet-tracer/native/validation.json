@@ -1,0 +1,39 @@
+{
+  "source_sha256": "bd9620274a359f90885aaf5d805de9d223c1516ecd657443f64a94686a2a04cb",
+  "preserved_user_cable": true,
+  "source_devices_preserved": true,
+  "script_module_unchanged": true,
+  "validation": [
+    "source EAX and zlib checks",
+    "generated EAX and zlib checks",
+    "lossless codec round trip",
+    "116 unique devices preserved",
+    "112 unique port pairs",
+    "all endpoint save-ref IDs resolve",
+    "no Script Module added or executed"
+  ],
+  "limitations": [
+    "Cisco file opening not tested",
+    "runtime interpretation of generated cable records not tested",
+    "startup/running configuration application not tested",
+    "host/server services not configured in these files"
+  ],
+  "outputs": [
+    {
+      "file": "clinic8-wired.pkt",
+      "bytes": 143333,
+      "sha256": "370b91a2c5b7ce5aad16cf33208ac59adf923bb87fafeb25d928bf5393376667",
+      "device_count": 116,
+      "cable_count": 112,
+      "cisco_runtime": "NOT_RUN"
+    },
+    {
+      "file": "clinic8-wired-ios.pkt",
+      "bytes": 155272,
+      "sha256": "d69454a3683e92db844824d040e009038d1c45566fed621557c92bfae3e29fef",
+      "device_count": 116,
+      "cable_count": 112,
+      "cisco_runtime": "NOT_RUN"
+    }
+  ]
+}
