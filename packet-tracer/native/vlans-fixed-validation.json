@@ -226,6 +226,21 @@
       "internal_http": "BLOCKED_USER http://10.1.30.10",
       "scope": "C1 only; C2/B1/B2 guest tests pending",
       "artifact": "These GUI changes exist on user machine; updated PKT not uploaded yet"
+    },
+    "C2_GUEST": {
+      "status": "PASS_USER",
+      "evidence": "User confirmed all three site guest checks worked following external HTTP allowed and internal ping/HTTP blocked instructions",
+      "artifact": "Updated user PKT pending upload"
+    },
+    "B1_GUEST": {
+      "status": "PASS_USER",
+      "evidence": "User confirmed all three site guest checks worked following external HTTP allowed and internal ping/HTTP blocked instructions",
+      "artifact": "Updated user PKT pending upload"
+    },
+    "B2_GUEST": {
+      "status": "PASS_USER",
+      "evidence": "User confirmed all three site guest checks worked following external HTTP allowed and internal ping/HTTP blocked instructions",
+      "artifact": "Updated user PKT pending upload"
     }
   }
 }

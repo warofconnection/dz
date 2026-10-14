@@ -4,7 +4,7 @@ HTTP-MIS,C2/B1/B2,Открыта страница МИС,,NOT_RUN
 BRANCH-PING,B2 -> B1 (10.11.10.58),Получен ICMP-ответ,User confirmed requested ping successful,PASS
 INTERNET-NAT,Все площадки,Внешний HTTP и NAT-трансляции,,NOT_RUN
 EMAIL,B1->C1/C2->B2,Письма получены,User confirmed both requested messages delivered,PASS
-GUEST-ISOLATION,Все гостевые VLAN,Интернет разрешён; 10/8 запрещён,,NOT_RUN
+GUEST-ISOLATION,Все гостевые VLAN,Интернет разрешён; 10/8 запрещён,User confirmed external HTTP allowed and internal ICMP/HTTP blocked on guest tablets at all four sites,PASS
 PRINTER-PING,Все этажи,МФУ своего этажа доступны,,NOT_RUN
 REOPEN,clinic8.pkt,Проверки после повторного открытия,,NOT_RUN
 DHCP-FIRST,C1-PC01 (requested test),IPv4 10.1.20.x/24; gateway 10.1.20.1,User screenshot: 169.254.135.54/16; gateway 0.0.0.0,FAIL
@@ -23,3 +23,6 @@ PING-B2-PC01-10.1.30.10,B2-PC01 -> 10.1.30.10,ICMP replies,User confirmed all re
 PING-B2-PC01-203.0.113.10,B2-PC01 -> 203.0.113.10,ICMP replies,User confirmed all requested pings successful,PASS
 PING-B2-PC01-10.11.10.58,B2-PC01 -> 10.11.10.58,ICMP replies,User confirmed all requested pings successful,PASS
 GUEST-C1,Guest tablet at C1,Guest DHCP; external HTTP allowed; internal ICMP and HTTP blocked,User confirmed expected address obtained and all three access checks matched,PASS
+GUEST-C2,Guest tablet at C2,External HTTP allowed; internal ICMP and HTTP blocked,User confirmed expected checks successful,PASS
+GUEST-B1,Guest tablet at B1,External HTTP allowed; internal ICMP and HTTP blocked,User confirmed expected checks successful,PASS
+GUEST-B2,Guest tablet at B2,External HTTP allowed; internal ICMP and HTTP blocked,User confirmed expected checks successful,PASS
