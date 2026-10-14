@@ -144,6 +144,30 @@
       "first_packet_timeout": true,
       "timeout_cause": "ARP possible, not confirmed",
       "repeat_test": "NOT_RUN"
+    },
+    "B1-PC01_DHCP": {
+      "status": "PASS",
+      "ip": "10.11.10.58",
+      "mask": "255.255.255.0",
+      "gateway": "10.11.10.1"
+    },
+    "B1_to_MIS": {
+      "status": "REACHABILITY_CONFIRMED_REPEAT_PENDING",
+      "target": "10.1.30.10",
+      "sent": 4,
+      "received": 2,
+      "first_two_timeout": true,
+      "timeout_cause": "ARP possible, unconfirmed",
+      "repeat_test": "NOT_RUN"
+    },
+    "B1_to_external": {
+      "status": "REACHABILITY_CONFIRMED_REPEAT_PENDING",
+      "target": "203.0.113.10",
+      "sent": 4,
+      "received": 2,
+      "first_two_timeout": true,
+      "timeout_cause": "ARP possible, unconfirmed",
+      "repeat_test": "NOT_RUN"
     }
   }
 }
