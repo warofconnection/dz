@@ -7,6 +7,7 @@ files={
  'Расчёты_вариант_8.docx':'docs/Расчёты_вариант_8.docx',
  'clinic8-L1-L2.pkt':'packet-tracer/clinic8-L1-L2.pkt',
  'clinic8-L1-L2-annotated.pkt':'packet-tracer/clinic8-L1-L2-annotated.pkt',
+ 'clinic8-L1-L2-ready.pkt':'packet-tracer/clinic8-L1-L2-ready.pkt',
  'Схемы/связи-площадок.png':'diagrams/logical-draft.png',
  **{'Схемы/'+name+'.png':'diagrams/'+name+'.png' for name in ['floor-C1','floor-C2','floor-B1','floor-B2','site','org']}}
 folder=ROOT/'deliverables';folder.mkdir(exist_ok=True);archive=folder/'ИТС_ДЗ1_Вариант8_L1-L2.zip'

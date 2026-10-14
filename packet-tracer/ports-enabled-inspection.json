@@ -1,0 +1,79 @@
+{
+  "file": "clinic8-L1-L2-ready.pkt",
+  "sha256": "92a0e3ed697dcdd006a90465986ae6328bc7e8c6fb77d549751d59994ec72ffe",
+  "source_sha256": "3b5221ff02046559e1fe4b39afc4d2c4d019c016953e4a784131135b5ec9cc2a",
+  "devices": 120,
+  "cables": 112,
+  "router_ports_enabled": 13,
+  "changes": [
+    {
+      "device": "R-C1",
+      "enabled": [
+        "GigabitEthernet0/0",
+        "GigabitEthernet0/1",
+        "GigabitEthernet0/2"
+      ],
+      "unused_ports_left_disabled": []
+    },
+    {
+      "device": "R-C2",
+      "enabled": [
+        "GigabitEthernet0/0",
+        "GigabitEthernet0/1"
+      ],
+      "unused_ports_left_disabled": [
+        "GigabitEthernet0/2"
+      ]
+    },
+    {
+      "device": "R-EDGE",
+      "enabled": [
+        "GigabitEthernet0/0",
+        "GigabitEthernet0/1"
+      ],
+      "unused_ports_left_disabled": [
+        "GigabitEthernet0/2"
+      ]
+    },
+    {
+      "device": "R-B1",
+      "enabled": [
+        "GigabitEthernet0/0",
+        "GigabitEthernet0/1"
+      ],
+      "unused_ports_left_disabled": [
+        "GigabitEthernet0/2"
+      ]
+    },
+    {
+      "device": "R-B2",
+      "enabled": [
+        "GigabitEthernet0/0",
+        "GigabitEthernet0/1"
+      ],
+      "unused_ports_left_disabled": [
+        "GigabitEthernet0/2"
+      ]
+    },
+    {
+      "device": "R-ISP",
+      "enabled": [
+        "GigabitEthernet0/0",
+        "GigabitEthernet0/1"
+      ],
+      "unused_ports_left_disabled": [
+        "GigabitEthernet0/2"
+      ]
+    }
+  ],
+  "checks": [
+    "cables/layout/annotations unchanged",
+    "no assigned IPv4/IPv6",
+    "no custom routing/DHCP/NAT/ACL/VLAN",
+    "only connected router ports enabled",
+    "persistent startup config",
+    "no other device changes",
+    "lossless authenticated container round trip"
+  ],
+  "cisco_opening": "NOT_RUN"
+}
