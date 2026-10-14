@@ -1,0 +1,8 @@
+{
+  "source_sha256": "05763343eacf05599dc46bad9c76d878f630c1e6df79dec1f823bf4797c859b6",
+  "annotated_sha256": "3b5221ff02046559e1fe4b39afc4d2c4d019c016953e4a784131135b5ec9cc2a",
+  "network_unchanged": true,
+  "background_zones": 5,
+  "labels": 5,
+  "cisco_opening": "NOT_RUN"
+}

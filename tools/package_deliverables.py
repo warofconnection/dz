@@ -5,10 +5,11 @@ files={
  'Презентация_вариант_8.pptx':'docs/Презентация_вариант_8.pptx',
  'Презентация_вариант_8.pdf':'docs/Презентация_вариант_8.pdf',
  'Расчёты_вариант_8.docx':'docs/Расчёты_вариант_8.docx',
- 'clinic8.pkt':'packet-tracer/clinic8.pkt',
- 'Схемы/packet-tracer.png':'diagrams/packet-tracer.png',
+ 'clinic8-L1-L2.pkt':'packet-tracer/clinic8-L1-L2.pkt',
+ 'clinic8-L1-L2-annotated.pkt':'packet-tracer/clinic8-L1-L2-annotated.pkt',
+ 'Схемы/связи-площадок.png':'diagrams/logical-draft.png',
  **{'Схемы/'+name+'.png':'diagrams/'+name+'.png' for name in ['floor-C1','floor-C2','floor-B1','floor-B2','site','org']}}
-folder=ROOT/'deliverables';folder.mkdir(exist_ok=True);archive=folder/'ИТС_ДЗ1_Вариант8.zip'
+folder=ROOT/'deliverables';folder.mkdir(exist_ok=True);archive=folder/'ИТС_ДЗ1_Вариант8_L1-L2.zip'
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
  for name,source in files.items():z.write(ROOT/source,name)
 with zipfile.ZipFile(archive) as z:

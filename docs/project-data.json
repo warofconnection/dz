@@ -8,7 +8,7 @@
       "y": 2,
       "vlan": 20,
       "department": "Регистратура",
-      "length_m": 16.8
+      "length_m": 20.8
     },
     {
       "floor": "C1",
@@ -18,7 +18,7 @@
       "y": 2,
       "vlan": 20,
       "department": "Регистратура",
-      "length_m": 16.8
+      "length_m": 24.4
     },
     {
       "floor": "C1",
@@ -28,7 +28,7 @@
       "y": 4,
       "vlan": 20,
       "department": "Регистратура",
-      "length_m": 14.8
+      "length_m": 12.8
     },
     {
       "floor": "C1",
@@ -38,7 +38,7 @@
       "y": 4,
       "vlan": 20,
       "department": "Регистратура",
-      "length_m": 14.8
+      "length_m": 12.8
     },
     {
       "floor": "C1",
@@ -48,7 +48,7 @@
       "y": 2,
       "vlan": 20,
       "department": "Регистратура",
-      "length_m": 19.2
+      "length_m": 21.2
     },
     {
       "floor": "C1",
@@ -58,7 +58,7 @@
       "y": 2,
       "vlan": 20,
       "department": "Регистратура",
-      "length_m": 22.8
+      "length_m": 24.8
     },
     {
       "floor": "C1",
@@ -68,7 +68,7 @@
       "y": 4,
       "vlan": 20,
       "department": "Регистратура",
-      "length_m": 17.2
+      "length_m": 15.2
     },
     {
       "floor": "C1",
@@ -78,7 +78,7 @@
       "y": 4,
       "vlan": 20,
       "department": "Регистратура",
-      "length_m": 20.8
+      "length_m": 18.8
     },
     {
       "floor": "C1",
@@ -88,7 +88,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 25.2
+      "length_m": 27.2
     },
     {
       "floor": "C1",
@@ -98,7 +98,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 28.8
+      "length_m": 30.8
     },
     {
       "floor": "C1",
@@ -108,7 +108,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 23.2
+      "length_m": 21.2
     },
     {
       "floor": "C1",
@@ -118,7 +118,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 26.8
+      "length_m": 24.8
     },
     {
       "floor": "C1",
@@ -128,7 +128,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 31.2
+      "length_m": 33.2
     },
     {
       "floor": "C1",
@@ -138,7 +138,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 34.8
+      "length_m": 36.8
     },
     {
       "floor": "C1",
@@ -148,7 +148,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 29.2
+      "length_m": 27.2
     },
     {
       "floor": "C1",
@@ -158,7 +158,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 32.8
+      "length_m": 30.8
     },
     {
       "floor": "C1",
@@ -168,7 +168,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Диагностика",
-      "length_m": 37.2
+      "length_m": 39.2
     },
     {
       "floor": "C1",
@@ -178,7 +178,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Диагностика",
-      "length_m": 40.8
+      "length_m": 42.8
     },
     {
       "floor": "C1",
@@ -188,7 +188,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Диагностика",
-      "length_m": 35.2
+      "length_m": 33.2
     },
     {
       "floor": "C1",
@@ -198,7 +198,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Диагностика",
-      "length_m": 38.8
+      "length_m": 36.8
     },
     {
       "floor": "C1",
@@ -208,7 +208,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Диагностика",
-      "length_m": 43.2
+      "length_m": 45.2
     },
     {
       "floor": "C1",
@@ -218,7 +218,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Диагностика",
-      "length_m": 46.8
+      "length_m": 48.8
     },
     {
       "floor": "C1",
@@ -228,7 +228,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Диагностика",
-      "length_m": 41.2
+      "length_m": 39.2
     },
     {
       "floor": "C1",
@@ -238,7 +238,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Диагностика",
-      "length_m": 44.8
+      "length_m": 42.8
     },
     {
       "floor": "C1",
@@ -248,7 +248,7 @@
       "y": 8,
       "vlan": 10,
       "department": "Общий печатный ресурс",
-      "length_m": 14
+      "length_m": 16
     },
     {
       "floor": "C1",
@@ -258,7 +258,7 @@
       "y": 8,
       "vlan": 10,
       "department": "Общий печатный ресурс",
-      "length_m": 34
+      "length_m": 36
     },
     {
       "floor": "C1",
@@ -268,7 +268,7 @@
       "y": 8,
       "vlan": 90,
       "department": "Гостевой доступ",
-      "length_m": 24
+      "length_m": 21
     },
     {
       "floor": "C1",
@@ -278,7 +278,7 @@
       "y": 13,
       "vlan": 30,
       "department": "Серверная",
-      "length_m": 8
+      "length_m": 0
     },
     {
       "floor": "C1",
@@ -288,7 +288,7 @@
       "y": 13,
       "vlan": 30,
       "department": "Серверная",
-      "length_m": 6
+      "length_m": 0
     },
     {
       "floor": "C1",
@@ -298,7 +298,7 @@
       "y": 13,
       "vlan": 30,
       "department": "Серверная",
-      "length_m": 8
+      "length_m": 0
     },
     {
       "floor": "C2",
@@ -308,7 +308,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 16.8
+      "length_m": 20.8
     },
     {
       "floor": "C2",
@@ -318,7 +318,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 16.8
+      "length_m": 24.4
     },
     {
       "floor": "C2",
@@ -328,7 +328,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 14.8
+      "length_m": 12.8
     },
     {
       "floor": "C2",
@@ -338,7 +338,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 14.8
+      "length_m": 12.8
     },
     {
       "floor": "C2",
@@ -348,7 +348,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 19.2
+      "length_m": 21.2
     },
     {
       "floor": "C2",
@@ -358,7 +358,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 22.8
+      "length_m": 24.8
     },
     {
       "floor": "C2",
@@ -368,7 +368,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 17.2
+      "length_m": 15.2
     },
     {
       "floor": "C2",
@@ -378,7 +378,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 20.8
+      "length_m": 18.8
     },
     {
       "floor": "C2",
@@ -388,7 +388,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 25.2
+      "length_m": 27.2
     },
     {
       "floor": "C2",
@@ -398,7 +398,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 28.8
+      "length_m": 30.8
     },
     {
       "floor": "C2",
@@ -408,7 +408,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 23.2
+      "length_m": 21.2
     },
     {
       "floor": "C2",
@@ -418,7 +418,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 26.8
+      "length_m": 24.8
     },
     {
       "floor": "C2",
@@ -428,7 +428,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 31.2
+      "length_m": 33.2
     },
     {
       "floor": "C2",
@@ -438,7 +438,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 34.8
+      "length_m": 36.8
     },
     {
       "floor": "C2",
@@ -448,7 +448,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 29.2
+      "length_m": 27.2
     },
     {
       "floor": "C2",
@@ -458,7 +458,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Специалисты",
-      "length_m": 32.8
+      "length_m": 30.8
     },
     {
       "floor": "C2",
@@ -468,7 +468,7 @@
       "y": 2,
       "vlan": 20,
       "department": "Администрация",
-      "length_m": 37.2
+      "length_m": 39.2
     },
     {
       "floor": "C2",
@@ -478,7 +478,7 @@
       "y": 2,
       "vlan": 20,
       "department": "Администрация",
-      "length_m": 40.8
+      "length_m": 42.8
     },
     {
       "floor": "C2",
@@ -488,7 +488,7 @@
       "y": 4,
       "vlan": 20,
       "department": "Администрация",
-      "length_m": 35.2
+      "length_m": 33.2
     },
     {
       "floor": "C2",
@@ -498,7 +498,7 @@
       "y": 4,
       "vlan": 20,
       "department": "Администрация",
-      "length_m": 38.8
+      "length_m": 36.8
     },
     {
       "floor": "C2",
@@ -508,7 +508,7 @@
       "y": 2,
       "vlan": 20,
       "department": "Администрация / ИТ",
-      "length_m": 43.2
+      "length_m": 45.2
     },
     {
       "floor": "C2",
@@ -518,7 +518,7 @@
       "y": 2,
       "vlan": 20,
       "department": "Администрация / ИТ",
-      "length_m": 46.8
+      "length_m": 48.8
     },
     {
       "floor": "C2",
@@ -528,7 +528,7 @@
       "y": 4,
       "vlan": 20,
       "department": "Администрация / ИТ",
-      "length_m": 41.2
+      "length_m": 39.2
     },
     {
       "floor": "C2",
@@ -538,7 +538,7 @@
       "y": 4,
       "vlan": 20,
       "department": "Администрация / ИТ",
-      "length_m": 44.8
+      "length_m": 42.8
     },
     {
       "floor": "C2",
@@ -548,7 +548,7 @@
       "y": 8,
       "vlan": 10,
       "department": "Общий печатный ресурс",
-      "length_m": 14
+      "length_m": 16
     },
     {
       "floor": "C2",
@@ -558,7 +558,7 @@
       "y": 8,
       "vlan": 10,
       "department": "Общий печатный ресурс",
-      "length_m": 34
+      "length_m": 36
     },
     {
       "floor": "C2",
@@ -568,7 +568,7 @@
       "y": 8,
       "vlan": 90,
       "department": "Гостевой доступ",
-      "length_m": 24
+      "length_m": 21
     },
     {
       "floor": "B1",
@@ -578,7 +578,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Регистратура",
-      "length_m": 16.8
+      "length_m": 20.8
     },
     {
       "floor": "B1",
@@ -588,7 +588,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Регистратура",
-      "length_m": 16.8
+      "length_m": 24.4
     },
     {
       "floor": "B1",
@@ -598,7 +598,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Регистратура",
-      "length_m": 19.2
+      "length_m": 21.2
     },
     {
       "floor": "B1",
@@ -608,7 +608,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Регистратура",
-      "length_m": 22.8
+      "length_m": 24.8
     },
     {
       "floor": "B1",
@@ -618,7 +618,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 25.2
+      "length_m": 27.2
     },
     {
       "floor": "B1",
@@ -628,7 +628,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 28.8
+      "length_m": 30.8
     },
     {
       "floor": "B1",
@@ -638,7 +638,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 23.2
+      "length_m": 21.2
     },
     {
       "floor": "B1",
@@ -648,7 +648,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 31.2
+      "length_m": 33.2
     },
     {
       "floor": "B1",
@@ -658,7 +658,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 34.8
+      "length_m": 36.8
     },
     {
       "floor": "B1",
@@ -668,7 +668,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 29.2
+      "length_m": 27.2
     },
     {
       "floor": "B1",
@@ -678,7 +678,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 37.2
+      "length_m": 39.2
     },
     {
       "floor": "B1",
@@ -688,7 +688,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 40.8
+      "length_m": 42.8
     },
     {
       "floor": "B1",
@@ -698,7 +698,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 35.2
+      "length_m": 33.2
     },
     {
       "floor": "B1",
@@ -708,7 +708,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 38.8
+      "length_m": 36.8
     },
     {
       "floor": "B1",
@@ -718,7 +718,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Сестринская",
-      "length_m": 43.2
+      "length_m": 45.2
     },
     {
       "floor": "B1",
@@ -728,7 +728,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Сестринская",
-      "length_m": 46.8
+      "length_m": 48.8
     },
     {
       "floor": "B1",
@@ -738,7 +738,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Сестринская",
-      "length_m": 41.2
+      "length_m": 39.2
     },
     {
       "floor": "B1",
@@ -748,7 +748,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Сестринская",
-      "length_m": 44.8
+      "length_m": 42.8
     },
     {
       "floor": "B1",
@@ -758,7 +758,7 @@
       "y": 8,
       "vlan": 10,
       "department": "Общий печатный ресурс",
-      "length_m": 14
+      "length_m": 16
     },
     {
       "floor": "B1",
@@ -768,7 +768,7 @@
       "y": 8,
       "vlan": 10,
       "department": "Общий печатный ресурс",
-      "length_m": 34
+      "length_m": 36
     },
     {
       "floor": "B1",
@@ -778,7 +778,7 @@
       "y": 8,
       "vlan": 90,
       "department": "Гостевой доступ",
-      "length_m": 24
+      "length_m": 21
     },
     {
       "floor": "B2",
@@ -788,7 +788,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Регистратура",
-      "length_m": 16.8
+      "length_m": 20.8
     },
     {
       "floor": "B2",
@@ -798,7 +798,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Регистратура",
-      "length_m": 16.8
+      "length_m": 24.4
     },
     {
       "floor": "B2",
@@ -808,7 +808,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Регистратура",
-      "length_m": 19.2
+      "length_m": 21.2
     },
     {
       "floor": "B2",
@@ -818,7 +818,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Регистратура",
-      "length_m": 22.8
+      "length_m": 24.8
     },
     {
       "floor": "B2",
@@ -828,7 +828,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 25.2
+      "length_m": 27.2
     },
     {
       "floor": "B2",
@@ -838,7 +838,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 28.8
+      "length_m": 30.8
     },
     {
       "floor": "B2",
@@ -848,7 +848,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 23.2
+      "length_m": 21.2
     },
     {
       "floor": "B2",
@@ -858,7 +858,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 31.2
+      "length_m": 33.2
     },
     {
       "floor": "B2",
@@ -868,7 +868,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 34.8
+      "length_m": 36.8
     },
     {
       "floor": "B2",
@@ -878,7 +878,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 29.2
+      "length_m": 27.2
     },
     {
       "floor": "B2",
@@ -888,7 +888,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 37.2
+      "length_m": 39.2
     },
     {
       "floor": "B2",
@@ -898,7 +898,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 40.8
+      "length_m": 42.8
     },
     {
       "floor": "B2",
@@ -908,7 +908,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 35.2
+      "length_m": 33.2
     },
     {
       "floor": "B2",
@@ -918,7 +918,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Терапия",
-      "length_m": 38.8
+      "length_m": 36.8
     },
     {
       "floor": "B2",
@@ -928,7 +928,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Сестринская",
-      "length_m": 43.2
+      "length_m": 45.2
     },
     {
       "floor": "B2",
@@ -938,7 +938,7 @@
       "y": 2,
       "vlan": 10,
       "department": "Сестринская",
-      "length_m": 46.8
+      "length_m": 48.8
     },
     {
       "floor": "B2",
@@ -948,7 +948,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Сестринская",
-      "length_m": 41.2
+      "length_m": 39.2
     },
     {
       "floor": "B2",
@@ -958,7 +958,7 @@
       "y": 4,
       "vlan": 10,
       "department": "Сестринская",
-      "length_m": 44.8
+      "length_m": 42.8
     },
     {
       "floor": "B2",
@@ -968,7 +968,7 @@
       "y": 8,
       "vlan": 10,
       "department": "Общий печатный ресурс",
-      "length_m": 14
+      "length_m": 16
     },
     {
       "floor": "B2",
@@ -978,7 +978,7 @@
       "y": 8,
       "vlan": 10,
       "department": "Общий печатный ресурс",
-      "length_m": 34
+      "length_m": 36
     },
     {
       "floor": "B2",
@@ -988,7 +988,7 @@
       "y": 8,
       "vlan": 90,
       "department": "Гостевой доступ",
-      "length_m": 24
+      "length_m": 21
     }
   ],
   "ports": [
@@ -1621,7 +1621,7 @@
       10
     ]
   },
-  "copper_m": 2868.4,
+  "copper_m": 2904.8,
   "spools": 12,
   "equipment": [
     [
@@ -1638,21 +1638,21 @@
     ],
     [
       "Маршрутизатор",
-      "Cisco C1111-8P; PT: 2911; производительность проверить с лицензией",
+      "MikroTik RB5009UG+S+IN: 7 × 1GbE, 1 × 2.5GbE, 1 × SFP+; PT: 2911",
       5,
-      180000
+      18366
     ],
     [
       "Коммутатор",
-      "Cisco CBS350-24P-4G, 24 × 1GbE PoE+, 4 × SFP 1G; PT: 2960-24TT",
+      "MikroTik CRS328-24P-4S+RM: 24 × 1GbE PoE, 4 × SFP+; PT: 2960-24TT",
       6,
-      95000
+      41010
     ],
     [
       "Точка доступа",
-      "TP-Link EAP610, Wi-Fi 6, 1GbE, PoE; PT: AccessPoint-PT",
+      "MikroTik cAP ax: Wi-Fi 6, 2 × 1GbE; PT: AccessPoint-PT",
       4,
-      16000
+      10819
     ],
     [
       "Сетевое МФУ",
@@ -1686,8 +1686,8 @@
     ],
     [
       "Патч-корд Cat6",
-      "Два на каждую из 99 линий + 7 межсетевых",
-      205,
+      "96 постоянных линий × 2 + 3 серверных + 7 межсетевых",
+      202,
       600
     ],
     [
@@ -1727,5 +1727,5 @@
       450
     ]
   ],
-  "total_rub": 9061750
+  "total_rub": 7907116
 }
