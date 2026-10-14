@@ -17,7 +17,7 @@
 - `docs/cable-routes.csv`, `project-data.json` — исходные числовые данные.
 - `packet-tracer/ports.csv`, `topology.dot`, `configs/` — портовая ведомость, редактируемая схема, 13 подготовленных конфигураций устройств.
 - `packet-tracer/ASSEMBLY.md` — ручная сборка в Packet Tracer 8.2.2, GUI-службы и приёмочные проверки.
-- `packet-tracer/build-clinic8.js`, `AUTOMATION.md` — подготовленный по официальному API скрипт сборки и инструкция для авторизованного Packet Tracer; исполнение не проверено.
+- `packet-tracer/clinic8-all-in-one.js`, `AUTOMATION.md` — единый сценарий создания/продолжения сети, настройки служб, испытаний и сохранения .pkt в авторизованном Packet Tracer. Логика проверена тестами с заменами IPC; исполнение в Cisco пока не подтверждено.
 - `packet-tracer/validation-results.csv` — все проверки Cisco пока `NOT_RUN`.
 - `docs/requirements-checklist.md` — соответствие методичке и незакрытые требования.
 
@@ -36,6 +36,7 @@ python3 tools/build_deliverables.py
 python3 tools/build_configs.py
 python3 tools/build_cisco_script.py
 python3 tools/verify_project.py
+node tools/test_cisco_builder.js
 ```
 
 Генераторы перезаписывают созданные документы. Правки готовых DOCX/PPTX сначала перенести в генератор или сохранить отдельную копию. Создание `.pkt` этими командами **не выполняется**. Использовать текущий checkout `/workspace/dz`; отдельный Git worktree для этой изолированной среды не нужен.

@@ -13,98 +13,16 @@ for p in d['ports']:links.append([p['device'],p['port'],p['endpoint'],'@ETH'])
 links.extend([['R-C1','GigabitEthernet0/0','SW-C1A','GigabitEthernet0/1'],['SW-C1A','GigabitEthernet0/2','SW-C1B','GigabitEthernet0/1'],['R-C2','GigabitEthernet0/0','SW-C2A','GigabitEthernet0/1'],['SW-C2A','GigabitEthernet0/2','SW-C2B','GigabitEthernet0/1'],['R-C1','GigabitEthernet0/1','R-C2','GigabitEthernet0/1'],['R-C1','GigabitEthernet0/2','R-EDGE','GigabitEthernet0/0'],['R-EDGE','GigabitEthernet0/1','SW-PROVIDER','GigabitEthernet0/1'],['R-B1','GigabitEthernet0/1','SW-PROVIDER','FastEthernet0/1'],['R-B2','GigabitEthernet0/1','SW-PROVIDER','FastEthernet0/2'],['R-ISP','GigabitEthernet0/0','SW-PROVIDER','GigabitEthernet0/2'],['R-B1','GigabitEthernet0/0','SW-B1','GigabitEthernet0/1'],['R-B2','GigabitEthernet0/0','SW-B2','GigabitEthernet0/1'],['R-ISP','GigabitEthernet0/1','PUBLIC-WEB','@ETH']])
 nodes.append(dict(name='PUBLIC-WEB',type=9,model='Server-PT',x=1450,y=100))
 configs={p.stem:p.read_text().splitlines() for p in (R/'packet-tracer/configs').glob('*.txt')}
-js='''// Packet Tracer 8.2.2 Script Engine, ECMAScript 5.\n// Execute only in a NEW EMPTY file, after normal Cisco authentication.\n// Prepared against the official IPC API supplied with 8.2.2; not runtime-verified.\n'''
-js+='var RESUME_EXISTING = false;\nvar BUILD_COMPLETE = false;\nvar NODES = '+json.dumps(nodes,ensure_ascii=False)+';\nvar LINKS = '+json.dumps(links)+';\nvar CONFIGS = '+json.dumps(configs)+';\n'
-js+='''
-function device(name) { return ipc.network().getDevice(name); }
-function etherPort(name) {
-    var p=device(name).getPorts();
-    for(var i=0;i<p.length;i++) {
-        var q=device(name).getPort(p[i]);
-        if(q.isEthernetPort()) return p[i];
-    }
-    throw new Error("No Ethernet port: "+name);
-}
-function main() {
-    var existingCount=ipc.network().getDeviceCount();
-    if(!RESUME_EXISTING && existingCount!==0)
-        throw new Error("Open a NEW EMPTY file first. Existing devices are preserved.");
-    if(RESUME_EXISTING) {
-        if(existingCount!==NODES.length)
-            throw new Error("Resume expects exactly "+NODES.length+" existing project devices.");
-        if(ipc.network().getLinkCount()!==0)
-            throw new Error("Resume expects zero existing cables. Existing cables are preserved.");
-        for(var r=0;r<NODES.length;r++) {
-            var expectedDevice=device(NODES[r].name);
-            if(!expectedDevice || expectedDevice.getName()!==NODES[r].name)
-                throw new Error("Missing expected device: "+NODES[r].name);
-        }
-    }
-    var ws=ipc.appWindow().getActiveWorkspace().getLogicalWorkspace();
-    for(var i=0;!RESUME_EXISTING && i<NODES.length;i++) {
-        var n=NODES[i],generated=ws.addDevice(n.type,n.model,n.x,n.y);
-        if(!generated) throw new Error("Could not create "+n.name+" model "+n.model);
-        device(generated).setName(n.name);
-    }
-    for(var j=0;j<LINKS.length;j++) {
-        var l=LINKS[j],p1=l[1],p2=l[3];
-        if(p1==="@ETH") p1=etherPort(l[0]);
-        if(p2==="@ETH") p2=etherPort(l[2]);
-        // Select an explicit cable: AUTO is not reliable for this IPC call.
-        var type1=device(l[0]).getType(),type2=device(l[2]).getType();
-        var cable=((type1===0 && type2===0) || (type1===1 && type2===1)) ? 8101 : 8100;
-        if(!ws.createLink(l[0],p1,l[2],p2,cable))
-            throw new Error("Failed link: "+l[0]+" ["+device(l[0]).getModel()+"] / "+p1+
-                " -> "+l[2]+" ["+device(l[2]).getModel()+"] / "+p2+"; cable="+cable+
-                "; ports1="+device(l[0]).getPorts()+"; ports2="+device(l[2]).getPorts());
-    }
-    ws.addNote(80,430,1,"Центральный корпус: C1 — регистратура, терапия, диагностика");
-    ws.addNote(80,980,1,"C2 — врачи-специалисты, администрация, ИТ");
-    ws.addNote(1170,430,1,"Филиал 1: регистратура, терапия, сестринская");
-    ws.addNote(1170,980,1,"Филиал 2: регистратура, терапия, сестринская");
-    ws.addNote(770,20,1,"Сеть оператора и внешний учебный ресурс");
-    for(var k=0;k<NODES.length;k++) {
-        var z=NODES[k];
-        if(z.endpoint) ws.addNote(z.x-35,z.y+48,1,z.endpoint.department);
-    }
-    if(ipc.network().getDeviceCount()!==113)
-        throw new Error("Unexpected device count after build; expected 113.");
-    // Configure after construction; API exposes synchronous command status.
-    for(var name in CONFIGS) if(CONFIGS.hasOwnProperty(name)) {
-        var c=device(name);c.skipBoot();
-        for(var t=0;t<CONFIGS[name].length;t++) {
-            var line=CONFIGS[name][t];if(!line) continue;
-            var result=c.enterCommand(line,"");
-            // Inspect these statuses in Script Engine Debug on target PT.
-            var state=result.first;
-            if(typeof state === "number" && state!==0)
-                throw new Error("IOS rejected "+name+": "+line+"; status "+state);
-        }
-    }
-    for(var a=0;a<NODES.length;a++) {
-        var e=NODES[a].endpoint;if(!e) continue;
-        if(e.type==="pc") device(e.id).setDhcpFlag(true);
-        if(e.type==="printer" || e.type==="server") {
-            var site={C1:1,C2:2,B1:11,B2:12}[e.floor];
-            var tail=e.type==="printer" ? (e.id.slice(-1)==="1"?20:21) :
-                ({"SRV-MIS":10,"SRV-MAIL":11,"SRV-FILE":12}[e.id]);
-            var port=device(e.id).getPort(etherPort(e.id));
-            port.setIpSubnetMask("10."+site+"."+e.vlan+"."+tail,"255.255.255.0");
-            port.setDefaultGateway("10."+site+"."+e.vlan+".1");
-            port.setDnsServerIp("10.1.30.11");
-        }
-    }
-    var publicPort=device("PUBLIC-WEB").getPort(etherPort("PUBLIC-WEB"));
-    publicPort.setIpSubnetMask("203.0.113.10","255.255.255.0");
-    publicPort.setDefaultGateway("203.0.113.1");
-    publicPort.setDnsServerIp("203.0.113.10");
-    if(ipc.network().getLinkCount()!==LINKS.length)
-        throw new Error("Unexpected cable count after build; expected "+LINKS.length);
-    BUILD_COMPLETE=true;
-    ws.addNote(750,1450,1,"Сборка закончена. Требуются настройки HTTP/DNS/EMAIL/Wi-Fi и проверки по ASSEMBLY.md.");
-}
-function cleanUp() { /* Keep created network intact. */ }
-'''
-(R/'packet-tracer/build-clinic8.js').write_text(js)
-(R/'packet-tracer/finish-clinic8.js').write_text(js.replace('var RESUME_EXISTING = false;','var RESUME_EXISTING = true;'))
-print('Prepared script:',len(nodes),'devices,',len(links),'Ethernet links')
+# Four guest tablets represent the Wi-Fi segment and are excluded from the clinic purchase count.
+for floor in ['C1','C2','B1','B2']:
+ ap=next(n for n in nodes if n['name']==f'{floor}-AP1')
+ nodes.append(dict(name=f'{floor}-GUEST',type=19,model='TabletPC-PT',x=ap['x']+60,y=ap['y']+70,guest_floor=floor))
+header='// Clinic8 v3. Run inside authenticated Packet Tracer 8.2.2.\n'
+header+='// Uses documented IPC API; never deletes existing devices or cables.\n'
+header+='var NODES = '+json.dumps(nodes,ensure_ascii=False)+';\n'
+header+='var LINKS = '+json.dumps(links)+';\n'
+header+='var CONFIGS = '+json.dumps(configs)+';\n'
+body=(R/'tools/cisco_runtime.js').read_text()
+for name in ['clinic8-all-in-one.js','build-clinic8.js','finish-clinic8.js']:
+ (R/'packet-tracer'/name).write_text(header+body)
+print('Unified v3 script:',len(nodes),'devices;',len(links),'wired links; 4 wireless guests')
