@@ -7,3 +7,5 @@ EMAIL,B1->C1/C2->B2,Письма получены,,NOT_RUN
 GUEST-ISOLATION,Все гостевые VLAN,Интернет разрешён; 10/8 запрещён,,NOT_RUN
 PRINTER-PING,Все этажи,МФУ своего этажа доступны,,NOT_RUN
 REOPEN,clinic8.pkt,Проверки после повторного открытия,,NOT_RUN
+DHCP-FIRST,C1-PC01 (requested test),IPv4 10.1.20.x/24; gateway 10.1.20.1,User screenshot: 169.254.135.54/16; gateway 0.0.0.0,FAIL
+PING-FIRST,C1-PC01 (requested test) -> 10.1.30.10,ICMP replies,"User screenshot: 4 sent, 0 received",FAIL

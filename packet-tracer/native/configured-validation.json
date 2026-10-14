@@ -79,11 +79,22 @@
     "files.clinic8.test": "10.1.30.12",
     "www.example.test": "203.0.113.10"
   },
-  "file_opening": "NOT_RUN",
-  "functional_tests": "NOT_RUN",
+  "file_opening": "OPEN_PASS_USER",
+  "functional_tests": "FAILED_FIRST_DHCP_AND_PING",
   "pending": [
     "Cisco must apply saved IOS config and DHCP at load; verify in CLI",
     "Wi-Fi security and guest test tablets still require setup",
     "End-to-end connectivity, HTTP, mail, NAT and guest ACL require real tests"
-  ]
+  ],
+  "observations": {
+    "source": "C1-PC01 (requested test; confirm device if different)",
+    "ipv4": "169.254.135.54",
+    "mask": "255.255.0.0",
+    "gateway": "0.0.0.0",
+    "ping_target": "10.1.30.10",
+    "received": 0,
+    "sent": 4,
+    "dhcp": "NO_LEASE",
+    "ios_configuration_application": "UNKNOWN"
+  }
 }
