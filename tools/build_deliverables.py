@@ -1,5 +1,7 @@
 from pathlib import Path
 import json, math, csv, html
+from copy import deepcopy
+from pptx.oxml.ns import qn
 from PIL import Image, ImageDraw, ImageFont
 from docx import Document
 from docx.shared import Pt, Cm
@@ -147,58 +149,80 @@ h('9. Источники')
 p('1. IEEE 802.3 — стандарты Ethernet (параметры 1000BASE-T/1000BASE-SX).\n2. Cisco Business 350 Series Managed Switches Data Sheet: https://www.cisco.com/c/en/us/products/collateral/switches/business-350-series-managed-switches/nb-06-bus350-series-ds-cte-en.html\n3. Cisco 1000 Series Integrated Services Routers Data Sheet: https://www.cisco.com/c/en/us/products/collateral/routers/1000-series-integrated-services-routers-isr/datasheet-c78-739512.html\n4. TP-Link EAP610: https://www.tp-link.com/en/business-networking/omada-wifi-ceiling-mount/eap610/\nТехнические паспорта используются как справочные материалы по выбранным классам оборудования. Цены в смете — ориентировочные.')
 D.save(ROOT/'docs/Расчёты_вариант_8.docx')
 # slides each mandatory item separate, room plans extra
-R=Presentation();R.slide_width=Inches(13.333);R.slide_height=Inches(7.5)
-NAVY=RGBColor(12,29,50)
-PANEL=RGBColor(22,44,68)
-INK=RGBColor(22,44,68)
+TEMPLATE=ROOT/'templates/Бауманский_шаблон.pptx'
+R=Presentation(TEMPLATE)
+COVER_PROTOTYPE=R.slides[0]
+BODY_PROTOTYPE=R.slides[11]
+# Retain the actual template master, layouts, theme and embedded fonts.
+# Example slides are removed; no template instructions become project content.
+for sid in list(R.slides._sldIdLst):
+ R.part.drop_rel(sid.rId);R.slides._sldIdLst.remove(sid)
+BLUE=RGBColor(23,109,234)
+TEXT=RGBColor(67,67,67)
+FAINT=RGBColor(217,217,217)
 WHITE=RGBColor(255,255,255)
-CYAN=RGBColor(82,203,220)
-GOLD=RGBColor(238,189,88)
-MUTED=RGBColor(175,195,211)
-def rect(s,x,y,w,h,fill,rounding=False):
- shape=s.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE if rounding else MSO_SHAPE.RECTANGLE,Inches(x),Inches(y),Inches(w),Inches(h))
- shape.fill.solid();shape.fill.fore_color.rgb=fill;shape.line.fill.background()
- if rounding:shape.adjustments[0]=.08
- return shape
+REGULAR='ALS Sector Regular'
+BOLD='ALS Sector Bold'
 def label(s,x,y,w,h,value,size,color,bold=False):
  box=s.shapes.add_textbox(Inches(x),Inches(y),Inches(w),Inches(h));tf=box.text_frame
  tf.margin_left=tf.margin_right=tf.margin_top=tf.margin_bottom=0;tf.word_wrap=True;tf.text=value
  for paragraph in tf.paragraphs:
-  paragraph.font.name='Calibri';paragraph.font.size=PPt(size);paragraph.font.bold=bold;paragraph.font.color.rgb=color
+  paragraph.font.name=REGULAR;paragraph.font.bold=bold;paragraph.font.size=PPt(size);paragraph.font.color.rgb=color
  return box
+def line(s,x,y,w,h=0):
+ sh=s.shapes.add_shape(MSO_SHAPE.RECTANGLE,Inches(x),Inches(y),Inches(w if w else .012),Inches(h if h else .012))
+ sh.fill.solid();sh.fill.fore_color.rgb=FAINT;sh.line.fill.background()
+def background(s,prototype):
+ original=prototype._element.cSld.bg
+ if original is None:return
+ bg=deepcopy(original)
+ for elem in bg.iter():
+  for attr in [qn('r:embed'),qn('r:link')]:
+   rid=elem.get(attr)
+   if rid:
+    rel=prototype.part.rels[rid]
+    newrid=s.part.relate_to(rel.target_ref if rel.is_external else rel.target_part,rel.reltype,is_external=rel.is_external)
+    elem.set(attr,newrid)
+ current=s._element.cSld.bg
+ if current is not None:s._element.cSld.remove(current)
+ s._element.cSld.insert(0,bg)
 def slide(title,body='',pic=None):
- s=R.slides.add_slide(R.slide_layouts[6]);s.background.fill.solid();s.background.fill.fore_color.rgb=NAVY
- cover=title.startswith('1.')
- # Keep the required section title as the first shape for document validation.
- label(s,.55,1.15 if cover else .56,12.0,1.5 if cover else .75,title,34 if cover else 27,WHITE,True)
- label(s,.58,.2,10,.25,'МГТУ ИМ. Н. Э. БАУМАНА  /  ИУ10  /  ИТС',10,MUTED,True)
- rect(s,.55,2.8 if cover else 1.42,1.1,.045,GOLD)
+ s=R.slides.add_slide(R.slide_layouts[6]);cover=title.startswith('1.')
+ background(s,COVER_PROTOTYPE if cover else BODY_PROTOTYPE)
+ # Required section title is first shape, independent of the template artwork.
+ label(s,.51,1.65 if cover else .57,12.26,1.75 if cover else .95,title,40 if cover else 26,WHITE if cover else TEXT,cover)
  if cover:
-  rect(s,.55,3.15,10.5,3.18,PANEL,True)
-  box=label(s,.88,3.45,9.85,2.6,body,18,WHITE)
-  for paragraph in box.text_frame.paragraphs:paragraph.space_after=PPt(9)
-  rect(s,11.35,3.45,1.4,1.4,PANEL,True)
-  label(s,11.52,3.58,1.1,.9,'08',44,GOLD,True)
-  label(s,11.47,5.05,1.35,.45,'ВАРИАНТ',11,MUTED,True)
+  label(s,.51,.41,12.26,.74,'Московский государственный технический университет им. Н. Э. Баумана',20,WHITE)
+  box=label(s,.54,3.66,11.95,2.5,body,18.5,WHITE)
+  for paragraph in box.text_frame.paragraphs:paragraph.space_after=PPt(11)
+  label(s,.51,6.73,10,.35,'Москва · 2026',18,RGBColor(174,205,255))
  elif pic:
   path=ROOT/'diagrams'/f'{pic}.png';pw,ph=Image.open(path).size
-  rect(s,.48,1.67,12.38,5.05,WHITE,True)
-  scale=min(12.08/pw,4.77/ph);iw,ih=pw*scale,ph*scale
-  s.shapes.add_picture(str(path),Inches((13.333-iw)/2),Inches(1.8+(4.77-ih)/2),width=Inches(iw),height=Inches(ih))
+  scale=min(12.26/pw,5.42/ph);iw,ih=pw*scale,ph*scale
+  s.shapes.add_picture(str(path),Inches((13.333-iw)/2),Inches(1.64+(5.42-ih)/2),width=Inches(iw),height=Inches(ih))
  else:
-  lines=body.split('\n');rows=math.ceil(len(lines)/2);gap=.16;height=(5.02-gap*(rows-1))/rows
-  for index,line in enumerate(lines):
-   x=.55+(index%2)*6.18;y=1.7+(index//2)*(height+gap)
-   important=line.startswith('Оценка капитальных затрат:')
-   rect(s,x,y,6.02,height,GOLD if important else WHITE,True);rect(s,x+.18,y+.23,.035,height-.46,INK if important else CYAN)
-   size=25 if important else 19 if len(line)<110 else 17.5
-   if important:line=line.replace(': ',':\n',1)
-   box=label(s,x+.38,y+.23,5.35,height-.46,line,size,INK,important)
-   box.text_frame.vertical_anchor=MSO_ANCHOR.MIDDLE
- # Footer and a restrained progress line; no institutional logo is invented.
- rect(s,.55,7.02,12.2,.012,PANEL)
- label(s,.55,7.13,10,.2,'ГОРОДСКАЯ ПОЛИКЛИНИКА  /  ВАРИАНТ 8',9,MUTED)
- label(s,12.02,7.10,.7,.26,f'{len(R.slides):02d}',11,GOLD,True)
+  items=body.split('\n');rows=math.ceil(len(items)/2);gap=.28;height=(5.22-gap*(rows-1))/rows
+  line(s,6.67,1.62,0,5.24)
+  for index,value in enumerate(items):
+   x=.76 if index%2==0 else 7.04;y=1.73+(index//2)*(height+gap)
+   if index>=2:line(s,x,y-.12,5.43)
+   important=value.startswith('Оценка капитальных затрат:')
+   if important:
+    caption,amount=value.split(': ',1)
+    label(s,x,y,5.43,.55,caption,20,TEXT)
+    label(s,x,y+.58,5.43,.78,amount,32,BLUE,True)
+   else:
+    box=label(s,x,y,5.43,height,value,19 if len(value)<115 else 17.5,TEXT)
+    # Blue emphasis follows the text-block treatment in the supplied template.
+    tf=box.text_frame;prefix,sep,rest=value.partition(':')
+    if sep and len(prefix)<55:
+     tf.clear();paragraph=tf.paragraphs[0]
+     first=paragraph.add_run();first.text=prefix+':';first.font.name=REGULAR;first.font.size=PPt(19 if len(value)<115 else 17.5);first.font.color.rgb=BLUE
+     last=paragraph.add_run();last.text=rest;last.font.name=REGULAR;last.font.size=first.font.size;last.font.color.rgb=TEXT
+ # Footer is supplementary; original university background/theme is retained.
+ if not cover:
+  label(s,.76,7.18,10,.18,'ИТС · ДЗ № 1 · Городская поликлиника · Вариант 8',9,RGBColor(161,161,163))
+  label(s,12.27,7.12,.45,.27,str(len(R.slides)),12,BLUE)
 slide('1. Предварительное проектирование сети поликлиники','МГТУ им. Н. Э. Баумана · факультет ИУ · кафедра ИУ-10\nДисциплина: «Информационно-телекоммуникационные системы»\nДомашнее задание № 1 · Вариант 8\nВыполнил: Устинов Илья Максимович · Группа: ИУ10-59\nПроверила: Федорова В. А. · Москва, 2026')
 slide('2. Постановка задачи','Спроектировать ЛВС городской поликлиники: центральный корпус и два филиала в разных районах города.\nОбеспечить МИС, обмен исследованиями, почту, Интернет, печать и беспроводной доступ.\nРезультаты: проект, расчёты DOCX, планы этажей и логическая модель Cisco Packet Tracer.\nМежэтажные и межкорпусные связи — через маршрутизаторы.')
 slide('3. Здания и размещение на местности',pic='site')
