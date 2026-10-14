@@ -8,7 +8,7 @@
   "original_xml_outside_insertion": "BYTE_IDENTICAL",
   "source_container_reproduction": "BYTE_IDENTICAL",
   "original_cdata_blocks_preserved": 6,
-  "runtime": "NOT_RUN",
+  "runtime": "OPEN_PASS_USER",
   "prior_candidate_runtime": "OPEN_FAILED_USER",
   "invalid_ap_port_names_corrected": [
     "C1-AP1",
@@ -20,5 +20,7 @@
   "limitations": [
     "Inserted cable records still require Cisco runtime verification",
     "IP/VLAN/services not configured"
-  ]
+  ],
+  "user_confirmation": "User confirmed file opened in Packet Tracer 8.2.2.0400",
+  "functional_tests": "NOT_RUN"
 }
