@@ -14,5 +14,5 @@ SW-C1A-VLAN-DB,SW-C1A prior configured file,"VLANs 10,20,30,90,99","User screens
 DHCP-C1-FIXED,C1-PC01; vlans-fixed file,10.1.20.x/24; gateway 10.1.20.1,User screenshot: 10.1.20.52/24; gateway 10.1.20.1,PASS
 PING-C1-MIS-FIXED,C1-PC01 -> 10.1.30.10; vlans-fixed file,ICMP replies,3/4 replies; first timeout; repeat pending,PASS_WITH_FIRST_TIMEOUT
 DHCP-B1-FIXED,B1-PC01,10.11.10.x/24; gateway 10.11.10.1,User screenshot: 10.11.10.58/24; gateway 10.11.10.1,PASS
-PING-B1-MIS,B1-PC01 -> 10.1.30.10,ICMP replies without persistent losses,User screenshot: 2/4 replies; first 2 timeouts; repeat pending,REACHABLE_REPEAT_PENDING
-PING-B1-EXTERNAL,B1-PC01 -> 203.0.113.10,ICMP replies without persistent losses,User screenshot: 2/4 replies; first 2 timeouts; repeat pending,REACHABLE_REPEAT_PENDING
+PING-B1-MIS,B1-PC01 -> 10.1.30.10,ICMP replies without persistent losses,Initial 2/4 replies; user confirmed repeat 4/4 replies,PASS_REPEAT
+PING-B1-EXTERNAL,B1-PC01 -> 203.0.113.10,ICMP replies without persistent losses,Initial 2/4 replies; user confirmed repeat 4/4 replies,PASS_REPEAT
