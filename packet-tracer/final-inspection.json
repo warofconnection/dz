@@ -161,7 +161,6 @@
     "4 AP SSIDs and WPA2/AES saved"
   ],
   "pending": [
-    "Actual Logical Workspace screenshot file required",
     "Reopened user tests reported successful after initial name resolution delay; not independently simulated in cloud",
     "Some acceptance checks remain outside user-confirmed test scope"
   ]
