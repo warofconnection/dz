@@ -208,6 +208,14 @@
     "B2-PC01_to_10.11.10.58": {
       "status": "PASS_USER",
       "evidence": "User confirmed all requested pings successful; no per-test packet counts supplied"
+    },
+    "EMAIL": {
+      "status": "PASS_USER",
+      "flows": [
+        "b1@clinic8.test -> c1@clinic8.test",
+        "c2@clinic8.test -> b2@clinic8.test"
+      ],
+      "evidence": "User confirmed success after instructions to send and receive both messages"
     }
   }
 }
