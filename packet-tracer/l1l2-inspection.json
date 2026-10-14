@@ -18,6 +18,7 @@
     "factory device services restored",
     "EAX/zlib and lossless codec checks"
   ],
-  "cisco_opening": "NOT_RUN",
-  "note": "Default unspecified values 0.0.0.0 and factory IOS commands can remain. Automatic local addresses may be generated again by Cisco."
+  "cisco_opening": "OPEN_PASS_USER",
+  "note": "Default unspecified values 0.0.0.0 and factory IOS commands can remain. Automatic local addresses may be generated again by Cisco.",
+  "opening_evidence": "User confirmed copy opens; router indicators red as expected with factory shutdown"
 }
