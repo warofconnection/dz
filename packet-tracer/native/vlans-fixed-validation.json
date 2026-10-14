@@ -172,6 +172,15 @@
       "repeat_test": "PASS_USER",
       "repeat_sent": 4,
       "repeat_received": 4
+    },
+    "B1_DNS_HTTP": {
+      "status": "PASS_USER",
+      "urls": [
+        "http://mis.clinic8.test",
+        "http://files.clinic8.test",
+        "http://www.example.test"
+      ],
+      "evidence": "User confirmed all three pages opened in response to named-page checks"
     }
   }
 }
