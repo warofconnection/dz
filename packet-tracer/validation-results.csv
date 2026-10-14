@@ -1,7 +1,7 @@
 check,source,expected,actual,status
 DHCP,C1/C2/B1/B2,Адреса соответствующих VLAN,,NOT_RUN
 HTTP-MIS,C2/B1/B2,Открыта страница МИС,,NOT_RUN
-BRANCH-PING,B1->B2,Получен ICMP-ответ,,NOT_RUN
+BRANCH-PING,B2 -> B1 (10.11.10.58),Получен ICMP-ответ,User confirmed requested ping successful,PASS
 INTERNET-NAT,Все площадки,Внешний HTTP и NAT-трансляции,,NOT_RUN
 EMAIL,B1->C1/C2->B2,Письма получены,,NOT_RUN
 GUEST-ISOLATION,Все гостевые VLAN,Интернет разрешён; 10/8 запрещён,,NOT_RUN
@@ -17,3 +17,8 @@ DHCP-B1-FIXED,B1-PC01,10.11.10.x/24; gateway 10.11.10.1,User screenshot: 10.11.1
 PING-B1-MIS,B1-PC01 -> 10.1.30.10,ICMP replies without persistent losses,Initial 2/4 replies; user confirmed repeat 4/4 replies,PASS_REPEAT
 PING-B1-EXTERNAL,B1-PC01 -> 203.0.113.10,ICMP replies without persistent losses,Initial 2/4 replies; user confirmed repeat 4/4 replies,PASS_REPEAT
 DNS-HTTP-B1,B1-PC01 browser,"MIS, archive, external pages open by DNS names",User confirmed all 3 pages opened,PASS
+PING-C2-PC01-10.1.30.10,C2-PC01 -> 10.1.30.10,ICMP replies,User confirmed all requested pings successful,PASS
+PING-C2-PC01-203.0.113.10,C2-PC01 -> 203.0.113.10,ICMP replies,User confirmed all requested pings successful,PASS
+PING-B2-PC01-10.1.30.10,B2-PC01 -> 10.1.30.10,ICMP replies,User confirmed all requested pings successful,PASS
+PING-B2-PC01-203.0.113.10,B2-PC01 -> 203.0.113.10,ICMP replies,User confirmed all requested pings successful,PASS
+PING-B2-PC01-10.11.10.58,B2-PC01 -> 10.11.10.58,ICMP replies,User confirmed all requested pings successful,PASS

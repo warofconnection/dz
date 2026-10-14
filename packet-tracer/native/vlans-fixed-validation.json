@@ -181,6 +181,33 @@
         "http://www.example.test"
       ],
       "evidence": "User confirmed all three pages opened in response to named-page checks"
+    },
+    "C2_PC01_address": {
+      "status": "EXPECTED_VLAN_CONFIRMED",
+      "reported_prefix": "10.2.10.x",
+      "planned_vlan": 10,
+      "department": "Специалисты",
+      "note": "Earlier assistant expectation 10.2.20.x was incorrect"
+    },
+    "C2-PC01_to_10.1.30.10": {
+      "status": "PASS_USER",
+      "evidence": "User confirmed all requested pings successful; no per-test packet counts supplied"
+    },
+    "C2-PC01_to_203.0.113.10": {
+      "status": "PASS_USER",
+      "evidence": "User confirmed all requested pings successful; no per-test packet counts supplied"
+    },
+    "B2-PC01_to_10.1.30.10": {
+      "status": "PASS_USER",
+      "evidence": "User confirmed all requested pings successful; no per-test packet counts supplied"
+    },
+    "B2-PC01_to_203.0.113.10": {
+      "status": "PASS_USER",
+      "evidence": "User confirmed all requested pings successful; no per-test packet counts supplied"
+    },
+    "B2-PC01_to_10.11.10.58": {
+      "status": "PASS_USER",
+      "evidence": "User confirmed all requested pings successful; no per-test packet counts supplied"
     }
   }
 }
