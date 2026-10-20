@@ -1,0 +1,28 @@
+{
+  "original_lab1_opening": "FAIL_USER_INCOMPATIBLE_FILE",
+  "revised_opening": "NOT_RUN",
+  "changes": [
+    "Switch 2950-24 record replaced: authentic PT 5.2 sample -> authentic PT 8.1 sample",
+    "Router 1841 record replaced: authentic PT 5.2 sample -> authentic PT 8.1 sample",
+    "Device placement separated between rack-mounted and floor devices; native power distribution device retained",
+    "Native XML root serialization used without an additional declaration"
+  ],
+  "checks": [
+    "Native EAX/zlib integrity and round trip",
+    "Qt XML parsing with the libraries shipped in Cisco Packet Tracer",
+    "Unique MAC/IDs, cable port references, IP/gateway/DHCP consistency",
+    "DNS, mail and Wi-Fi settings",
+    "Configured VLAN, trunk and ACL rule consistency"
+  ],
+  "limitations": "Qt XML parsing is not full Cisco device deserialization or live simulation. Revised files need user opening confirmation.",
+  "files": {
+    "lab1-822.pkt": {
+      "bytes": 84891,
+      "sha256": "2d5c6d48fe683523b29506670443a4cda7a279e77912f73faa5ad94c05429397"
+    },
+    "lab2-822.pkt": {
+      "bytes": 123534,
+      "sha256": "aa4f32d33fc66f8314bcea861d4318d241fbe5be78c4901b9baf9d70ccb36ee0"
+    }
+  }
+}
