@@ -1,0 +1,81 @@
+{
+  "diagnosis": "CEmailClient::deserialize requires NO_OF_MAILS; previous mail_client writer omitted it. Native consumer returns false when the tag is missing.",
+  "target": "8.2.2.0400",
+  "control_opening": "PASS_USER_CONFIRMED",
+  "old_files": {
+    "lab1.pkt": [
+      {
+        "device": "PC0",
+        "missing": [
+          "NO_OF_MAILS"
+        ]
+      },
+      {
+        "device": "Laptop0",
+        "missing": [
+          "NO_OF_MAILS"
+        ]
+      }
+    ],
+    "lab1-822.pkt": [
+      {
+        "device": "PC0",
+        "missing": [
+          "NO_OF_MAILS"
+        ]
+      },
+      {
+        "device": "Laptop0",
+        "missing": [
+          "NO_OF_MAILS"
+        ]
+      }
+    ],
+    "native/lab1-native.pkt": [
+      {
+        "device": "PC0",
+        "missing": [
+          "NO_OF_MAILS"
+        ]
+      },
+      {
+        "device": "Laptop0",
+        "missing": [
+          "NO_OF_MAILS"
+        ]
+      }
+    ],
+    "native/lab2-native.pkt": [
+      {
+        "device": "PC0",
+        "missing": [
+          "NO_OF_MAILS"
+        ]
+      },
+      {
+        "device": "Laptop0",
+        "missing": [
+          "NO_OF_MAILS"
+        ]
+      }
+    ]
+  },
+  "new_files": {
+    "lab1-fixed.pkt": {
+      "sha256": "609d7e8dd765d59b234d9ec16419cd5e5be165e7e2c0578b352760e241491c42",
+      "bytes": 91464,
+      "patch": "Only two missing mail counters inserted; all other decoded bytes equal the previous native copy",
+      "mail_schema": "PASS",
+      "runtime_opening": "NOT_RUN",
+      "runtime_simulation": "NOT_RUN"
+    },
+    "lab2-fixed.pkt": {
+      "sha256": "fee4eadf6251e002bfcedbb7e3c885792dafc26c64b9726925fdb574c4bd7e5a",
+      "bytes": 132357,
+      "patch": "Only two missing mail counters inserted; all other decoded bytes equal the previous native copy",
+      "mail_schema": "PASS",
+      "runtime_opening": "NOT_RUN",
+      "runtime_simulation": "NOT_RUN"
+    }
+  }
+}
