@@ -1,0 +1,19 @@
+{
+  "note": "Static configuration checks only; not Cisco runtime simulation",
+  "results": [
+    {
+      "file": "lab1-native.pkt",
+      "static_checks": "PASS",
+      "devices": 11,
+      "cables": 6,
+      "runtime": "NOT_RUN"
+    },
+    {
+      "file": "lab2-native.pkt",
+      "static_checks": "PASS",
+      "devices": 27,
+      "cables": 23,
+      "runtime": "NOT_RUN"
+    }
+  ]
+}

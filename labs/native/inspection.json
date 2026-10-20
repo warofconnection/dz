@@ -1,0 +1,25 @@
+{
+  "basis": "User-supplied native labacis1.pkt; version 8.2.2.0400",
+  "source_sha256": "df7d1bc6f04d78e2fc9b2736682689a317910f2e371b2f0d8a2db67a16ed9560",
+  "changes": [
+    "Preserved existing devices, native interface cards, save reference IDs, physical hierarchy and global records",
+    "Imported additional device records from native bundled samples, retaining CDATA",
+    "Added missing laboratory devices and configured both final schemes",
+    "Native original link records retained where endpoints match; no synthetic port memory pointers"
+  ],
+  "download_corruption": "Ruled out: uploaded failed lab1-822.pkt equals published original byte for byte",
+  "root_cause_previous_failure": "Not isolated; old document reconstruction was replaced",
+  "static_checks": "PASS",
+  "runtime_opening": "NOT_RUN",
+  "runtime_simulation": "NOT_RUN",
+  "files": {
+    "lab1-native.pkt": {
+      "bytes": 91458,
+      "sha256": "d6d355dfd0a3a1c2d4b5b09f183220873795fab28b88850e9ee6d936b2018545"
+    },
+    "lab2-native.pkt": {
+      "bytes": 132351,
+      "sha256": "09d20c4df08297f3b87413deb7be84df7f4b9be598a479b75c369b9570e6d854"
+    }
+  }
+}
