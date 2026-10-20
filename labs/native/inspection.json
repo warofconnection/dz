@@ -10,7 +10,7 @@
   "download_corruption": "Ruled out: uploaded failed lab1-822.pkt equals published original byte for byte",
   "root_cause_previous_failure": "Not isolated; old document reconstruction was replaced",
   "static_checks": "PASS",
-  "runtime_opening": "NOT_RUN",
+  "runtime_opening": "FAIL_USER_INCOMPATIBLE_FILE_LAB1_NATIVE",
   "runtime_simulation": "NOT_RUN",
   "files": {
     "lab1-native.pkt": {
@@ -21,5 +21,12 @@
       "bytes": 132351,
       "sha256": "09d20c4df08297f3b87413deb7be84df7f4b9be598a479b75c369b9570e6d854"
     }
+  },
+  "status": "DO_NOT_USE_UNTIL_FIXED",
+  "open_control": {
+    "change": "Exactly one DESCRIPTION element; all other decoded bytes identical to native user file",
+    "sha256": "7d57da52d367836f142d278926528f9c0eea4e14b0ad76df966836719bcf68a2",
+    "bytes": 91454,
+    "opening": "NOT_RUN"
   }
 }
