@@ -1,6 +1,6 @@
 {
   "original_lab1_opening": "FAIL_USER_INCOMPATIBLE_FILE",
-  "revised_opening": "NOT_RUN",
+  "revised_opening": "FAIL_USER_INCOMPATIBLE_FILE_LAB1",
   "changes": [
     "Switch 2950-24 record replaced: authentic PT 5.2 sample -> authentic PT 8.1 sample",
     "Router 1841 record replaced: authentic PT 5.2 sample -> authentic PT 8.1 sample",
@@ -24,5 +24,9 @@
       "bytes": 123534,
       "sha256": "aa4f32d33fc66f8314bcea861d4318d241fbe5be78c4901b9baf9d70ccb36ee0"
     }
-  }
+  },
+  "revised_lab2_opening": "NOT_RUN",
+  "target_version_confirmed_by_user": "8.2.2.0400",
+  "root_cause": "UNRESOLVED; legacy-record replacement did not fix lab1 opening",
+  "status": "DO_NOT_TREAT_AS_VALIDATED"
 }
